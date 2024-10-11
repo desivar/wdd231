@@ -22,7 +22,7 @@ h1 {
 }
 
 header {
-    background-color: #caf0f8;
+    background-color: #2979e1;
     padding: 10px;
 }
 
@@ -124,7 +124,7 @@ header {
 }
 
 .completed .openButton {
-    background-color: #124559; /* o cualquier otro color que desees */
+    background-color: #3998bd; /*  */
     color: white;
     width: 100%;
     border: none;
@@ -132,7 +132,7 @@ header {
 }
 
 .not-completed .openButton{
-    background-color: lightgray; /* o cualquier otro color que desees */
+    background-color: lightgray; /* */
     width: 100%;
     border: none;
     cursor: pointer;
@@ -176,7 +176,7 @@ dialog button {
     margin: 0;
 	color: black;
     text-align: center;
-    background-color: #caf0f8;
+    background-color: #598eea;
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1920px) {
@@ -190,6 +190,11 @@ dialog button {
 
     .imgProfile {
         width: 120px;
+        border-radius: 3px;
+        box-shadow: #cbcfd2;
+        color: #000;
+    
+        
     }
 
     h1 {
@@ -203,7 +208,7 @@ dialog button {
     .navigation {
         flex-direction: row;
         justify-content: space-around;
-        background-color: #124559;
+        background-color: #1c518a;
         height: 50px;
         align-items: center;
     }
@@ -268,7 +273,7 @@ dialog button {
 
     .filter-course h2 {
         margin: 5px;
-        background-color: black;
+        background-color: rgb(15, 122, 155);
     }
 
     .filter-course:hover {
