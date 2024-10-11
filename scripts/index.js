@@ -1,5 +1,4 @@
-//const currentYear = document.getElementById('currentYear');
-//currentYear.textContent = new Date().getUTCFullYear();
+
 
 const lastModified = document.getElementById('lastModified');
 lastModified.innerHTML = `Last Updated on <i>${document.lastModified}</i>`;
