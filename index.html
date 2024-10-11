@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Desire Vargas">
+    <meta name="description" content="This is the home page for WDD231-Assignment |index| example about how to a chamber of commerce">
+    <link rel="icon" href="favicon.ico">
+    <title>WDD 231: Web Frontend Development I-Desire Vargas</title>
+    <link href="styles/base.css" type="text/css" rel="stylesheet">
+    <script src="scripts/base.js" defer></script>
+    <!--Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+
+    <!--Open Graphs-->
+    <meta property="og:title" content="WDD 231: Web Frontend Development I|Desire Vargas">
+    <meta property="og:type" content="website">
+    <meta property="og:image">
+    <meta property="og:url">
+</head>
+    <body>
+        <header>
+            <div id="photo">
+                <img id="me-photo" src="images/" width="150" height="160" loading="lazy" alt="Desire pictures">
+            </div>
+            <h1>💗Đ€ŞƗŘ€ VΔŘǤΔŞ💗</h1>
+        </header>
+        <button id="menu" name="menu" title="hamburgerMenu"></button>
+        <nav id="navMenu">
+            <ul>
+                <li><a href="#" id="refresh" class="active">Home</a></li>
+                <li><a href="chamber/index.html">Chamber</a></li>
+                <li><a href="https://github" target="_blank">Github Profile</a></li>
+                <li><a href="https://www.linkedin."
+                        target="_blank">LinkedIn</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section id="course-work">
+                <h2>Course Work</h2>
+                <ul>
+                    <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </section>
+        <section id="country">
+            <h2>Roatan, Honduras</h2>
+            <figure id="roatan-container">
+                <picture id="roatan-img">
+                    <source id="mobile-roatan" srcset="images/tikal-mobile.webp" media="(max-width: 699px)">
+                    <img src="images/roatan" alt="Roatan" width="300" height="300" loading="lazy">
+                </picture>
+                <figcaption>Tikal, Peten</figcaption>
+            </figure>
+        </section>
+        <section id="certificate-content">
+            <h2>Web and Computer Programer Certificate</h2>
+            <div id="buttons-filter">
+                <button name="all-courses" class="general-button" id="all-courses" type="button">All</button>
+                <button name="cse" class="general-button" id="cse" type="button">CSE</button>
+                <button name="wdd" class="general-button" id="wdd" type="button">WDD</button>
+            </div>
+            <div class="container-courses">
+                <!--Here we are going to use Javascript-->
+            </div>
+        </section>
+        <dialog id="course-details">
+
+        </dialog>
+    </main>
+    <footer>
+        <p>
+            <span>&copy;</span>
+            <span id="currentyear"></span>
+            Desire Vargas|Honduras
+        
+        </p>
+        <p id="modified"></p>
+        <hr>
+        <img src="images/flag." width="50" height="35" loading="lazy" alt="hondurasFlag">
+    </footer>
+</body>
+</html>
