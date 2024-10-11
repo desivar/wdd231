@@ -1,89 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="This page is the student home page for the WDD231 course of BYU Idaho online">
+    <title>WDD231|Desire Vargas</title>
+    <meta name="description" content="Web and Computer Programming Certificate Home Page">
     <meta name="author" content="Desire Vargas">
-    <meta property="og:title" content="WDD 231 Student Home Course Page">
-    <meta property="og:type" content="website" />
-    <meta property="og:description" content="This page is the student home page for the WDD231 course of BYU Idaho online">
-    <meta property="og:image" content="https://">
-    <meta property="og:url" content="https://">
-    
-    <title>Course Home Page - Desire Vargas</title>
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/index.css">
+    <meta property="og:title" content="Home page Chamber of commerce by Desire Vargas" />
+    <meta property="og:type" content="Website" />
+    <meta property="og:url" content="https://github.com/desivar/WDD231/tree/main/chamber" />
+    <meta property="og:image"
+        content="https://media." />
+    <link rel="icon" href="images/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="images/fav.ico">
-    <script src="scripts/index.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <script src="scripts/home.js" defer></script>
 </head>
+
 <body>
     <header>
-        <div class="header">
-            <picture >
-                <source srcset="images/me.t.jpg" media="(min-width: 764px)">
-                <img  class="images" src="images/me.t.jpg" alt="Desire picture">
-            </picture>
-            <h1>💗Đ€ŞƗŘ€ VΔŘǤΔŞ💗</h1>
-        </div>
-
-        <button id="menu" aria-label="Menu button"></button>
-
+        <section class="titleImg">
+            <img src="images/me.t.jpg" alt="Desire Vargas" class="imgProfile">
+            <h1>Desire Vargas</h1>
+        </section>
+        <button id="menu" aria-label="Menu"></button>
         <nav class="navigation">
-            <a href="#" class="current">Home</a>
-            <a href="#">Chamber</a>
-            <a href="https://github" target="_blank">GitHub Profile</a>
-            <a href="https://" target="_blank">LinkedIn</a>
+            <a href="index.html">Home</a>
+            <a href="https://github.com/desivar/WDD231/blob/main/index.html" target="_blank">Chamber</a>
+            <a href="https://github.com/desivar?tab=repositories" target="_blank">GitHub </a>
+            <a href="https://www.linkedin.com/in/desire-delmy-vargas-tinoco-853381247/" target="_blank">Linkedin</a>
         </nav>
     </header>
 
-    <main class="container main-content">
-
-        <section>
+    <main>
+        <section class="card1">
             <h2>Course Work</h2>
             <ul>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li>
+                <li>
+                <li>
             </ul>
         </section>
 
-        <section>
+        <section class="card2">
             <h2>Roatan, Honduras</h2>
-            <figure>
-                <picture>
-                    <source srcset="images/" media="(min-width: 764px)">
-                    <img src="images/" alt="roatan-honduras">
-                </picture>
-                <figcaption>Roatan </figcaption>
-            </figure>
+            <img src="images/" alt="roatan" class="img roatan">
+            <p>roatan</p>
         </section>
 
-        <section class="courses-section">
-            <h2>Web and Computer Programmin Certificate <span id="credits"></span></h2>
-            <nav class="courses-nav">
-                <button id="all" aria-label="All filter button">All</button>
-                <button id="cse" aria-label="CSE filter button">CSE</button>
-                <button id="wdd" aria-label="WDD filter button">WDD</button>
-            </nav>
+        <section class="card3">
+            <h2>Web and Computer Programming Certificate</h2>
+            <section class="courseType">
+                <div class="filter-course" data-course="all">
+                    <h2>All</h2>
+                </div>
 
-            <ul id="courses">
+                <div class="filter-course" data-course="cse">
+                    <h2>CSE</h2>
+                </div>
 
-            </ul>
+                <div class="filter-course" data-course="wdd">
+                    <h2>WDD</h2>
+                </div>
+            </section>
+
+            <div class="courses"> </div>
+
+            <dialog id="course-details"></dialog>
+
+            <p id="total-credits"></p>
         </section>
     </main>
 
     <footer>
-
-        <div class="footer">
-            <p>©<span id="currentyear"></span>  Desire Vargas|🪼Roatan</p>
-            <p class="last-modification">Last Modification: <span id="lastModified"></span></p>
-
-        </div>
-        
+        <p id="footer"></p>
     </footer>
 </body>
+
 </html>
