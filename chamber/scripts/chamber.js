@@ -22,69 +22,69 @@ hamButton.addEventListener('click', () => {
 
 
 
-//const url = '../chamber/data/members.json' // fetching the members data from the Json file
+const url = '../chamber/data/members.json' // fetching the members data from the Json file
 
-//**const cards = document.querySelector('#cards-section');
+const cards = document.querySelector('#cards-section');
 
-//const getMembersData = async () => {
-   // try {
-       // const response = await fetch(url);
-       // if(!response.ok) {
-       //     throw new Error (`Response status: ${response.status}`)
-        //}
+const getMembersData = async () => {
+   try {
+        const response = await fetch(url);
+       if(!response.ok) {
+           throw new Error (`Response status: ${response.status}`)
+        }
 
-        //const data = await response.json();
-        //return data
-   // }
+        const data = await response.json();
+        return data
+    }
 
-    //catch (error) {
-       // console.error(error.message)
-   // }
-//}
+    catch (error) {
+        console.error(error.message)
+    }
+}
  
 
 
-//const displayMembersData = (membersData) => {   // Creating the function to display the members data in the directory page
-   // membersData.forEach (member => {
-      //  let card = document.createElement('article');
-        //let companyName = document.createElement('h3');
-        //let companyLogo = document.createElement('img');
-        //let address = document.createElement('p');
-        //let phoneNumber = document.createElement('p')
-        //let websiteUrl = document.createElement('a');
+const displayMembersData = (membersData) => {   // Creating the function to display the members data in the directory page
+   membersData.forEach (member => {
+        let card = document.createElement('article');
+        let companyName = document.createElement('h3');
+        let companyLogo = document.createElement('img');
+        let address = document.createElement('p');
+        let phoneNumber = document.createElement('p')
+        let websiteUrl = document.createElement('a');
 
-        //companyName.textContent = `${member.name}`;
-       // address.textContent = `${member.address}`;
-       // phoneNumber.textContent = `${member.phoneNumber}`;
-       // websiteUrl.textContent = 'Visit Website';
+        companyName.textContent = `${member.name}`;
+        address.textContent = `${member.address}`;
+        phoneNumber.textContent = `${member.phoneNumber}`;
+        websiteUrl.textContent = 'Visit Website';
 
-       // websiteUrl.setAttribute('href', member.websiteUrl)
+        websiteUrl.setAttribute('href', member.websiteUrl)
         
-       // companyLogo.setAttribute('src', member.image);
-        //companyLogo.setAttribute('alt', `Logo of ${member.name}`);
-        //companyLogo.setAttribute('loading', 'lazy');
-        //companyLogo.setAttribute('width', '200');
-        //companyLogo.setAttribute('height', '200');
+        companyLogo.setAttribute('src', member.image);
+        companyLogo.setAttribute('alt', `Logo of ${member.name}`);
+        companyLogo.setAttribute('loading', 'lazy');
+        companyLogo.setAttribute('width', '200');
+        companyLogo.setAttribute('height', '200');
 
    
-       // websiteUrl.classList.add('card-button')
-        //card.appendChild(companyLogo);
-        //card.appendChild(companyName);
-        //card.appendChild(address);
-        //card.appendChild(phoneNumber);
-        //card.appendChild(websiteUrl);
+        websiteUrl.classList.add('card-button')
+        card.appendChild(companyLogo);
+        card.appendChild(companyName);
+        card.appendChild(address);
+        card.appendChild(phoneNumber);
+        card.appendChild(websiteUrl);
 
-       // cards.classList.add('grid-view')
-        //cards.appendChild(card);
+        cards.classList.add('grid-view')
+        cards.appendChild(card);
 
-   // })
-//}
+    })
+}
 
-//const membersDirectory = async (data) => {
-    //let members = await getMembersData();
+const membersDirectory = async (data) => {
+    let members = await getMembersData();
 
-   // displayMembersData(members);//
-//}
+    displayMembersData(members);
+}
 
 const gridView = document.querySelector('#grid-view');
 const listView = document.querySelector('#list-view');
