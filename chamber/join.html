@@ -1,193 +1,139 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <meta name="description" content="This is the Join page for WDD231-Assignment |  example about how to a chamber of commerce">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Page CoC Roatan </title>
+    <meta name="description" content="Roatan Chamber Join Page">
     <meta name="author" content="Desire Vargas">
-    <meta property="og:title" content="Join Page| Roatan Chamber of Commerce"> 
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://github.com/desivar/WDD231/blob/main/chamber/index.html">
-    <title>Roatan Chamber of Commerce</title>
-    <link rel="icon" href="images/fav.ico">
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/chamber.css">
-    <link rel="stylesheet" href="styles/chamber-large.css">
+    <meta property="og:title" content="Join Page Chamber of commerce" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://" />
+    <meta property="og:image" content="https://" />
+    <link rel="icon" href="images/logroatn.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/join.css">
+    
     <script src="scripts/join.js" defer></script>
-    <script src="scripts/chamber.js" defer></script>
-
 </head>
 
-<header>
-    <img src="images/logroatn.png" alt="Roatan Chamber of Commerce" width="230" height="166">
-    <div class="banner">
-        <h1>Roatan</h1>
-        <h3>Chamber of Commerce</h3>
-    </div>
-    <button id="menu" title="menu"></button>
-    <nav class="navigation">
-        <ul>
-            <li><a id="home" href="index.html">Home</a></li>
-            <li><a id="directory" href="directory.html">Directory</a></li>
-            <li><a id="join" class="active" href="join.html">Join</a></li>
-            <li><a id="discover" href="#/">Discover</a></li>
-        </ul>
-    </nav>
-</header>
-<main>
-    <div class="form-wrapper">
-        <section class="card">
-            <h2>Become A Member</h2>
-            <form class="join" action="thankyou.html" method="get">
-                <label for="firstName">First Name:
-                    <input type="text" id="firstName" name="firstName" title="First Name" autocomplete="given-name"
-                           required>
-                </label>
+<body>
+    <header>
+        <img src="images/logroatn.png" alt="Logo Chamber of Commerce" class="chamberLogo">
+        <h1>Roatan <br>Chamber of Commerce</h1>
+        <button id="menuButton" aria-label="Menu"></button>
 
-                <label for="lastName">Last Name:
-                    <input type="text" id="lastName" name="lastName" title="Last Name" autocomplete="family-name"
-                           required>
-                </label>
+        <nav class="navigation">
+            <a href="index.html" title="Home">Home</a>
+            <a href="#" title="Discover">Discover</a>
+            <a href="directory.html" title="Directory">Directory</a>
+            <a href="join.html" title="Join">Join</a>
+        </nav>
+    </header>
 
-                <label for="organizationalTitle">Organizational Title:
-                    <input type="text" id="organizationalTitle" name="organizationalTitle"
-                           title="Organization Title"
-                           autocomplete="organization-title" minlength="7" pattern="[a-zA-Z\-\s]+" required>
-                </label>
+    <main>
+        <div class="main-content">
+            <form method="get" action="thankyou.html">
+                <fieldset>
+                    <legend>Membership Application Form</legend>
+                    <div>
+                        <label for="firstName">First Name: *</label>
+                        <input type="text" id="firstName" name="firstName" title="Applicant's First Name" required
+                            autocomplete="given-name">
+                    </div>
+                    <div>
+                        <label for="lastName">Last Name: *</label>
+                        <input type="text" id="lastName" name="lastName" title="Applicant's First Name" required
+                            autocomplete="given-name">
+                    </div>
+                    <div>
+                        <label for="orgTitle">Organizational Title: </label>
+                        <input type="text" id="orgTitle" name="orgTitle" title="Your Title in the Organization"
+                            pattern="[A-Za-z\s-]{7,}" autocomplete="organization-title">
+                    </div>
+                    <div class="form-item">
+                        <label for="email">Email: *</label>
+                        <input type="email" id="email" name="email" title="Applicant's Email" required
+                            autocomplete="email" placeholder="example@example.com">
+                    </div>
+                    <div>
+                        <label for="phone">Phone: *</label>
+                        <input type="tel" id="phone" name="phone" title="Applicant's Phone Number" required
+                            autocomplete="tel">
+                    </div>
+                    <div>
+                        <label for="orgName">Organization Name: * </label>
+                        <input type="text" id="orgName" name="orgName" title="Business/Organization Name" required
+                            autocomplete="organization">
+                    </div>
+                </fieldset>
 
-                <label for="email">Email Address:
-                    <input type="email" id="email" name="email" title="Email Address" autocomplete="email" placeholder="me@example.com" required>
-                </label>
+                <fieldset>
+                    <legend>Select Membership Level</legend>
+                    <div class="radio-group">
+                        <input type="radio" id="NP" name="membership" value="NP">
+                        <label for="NP">Non-Profit (No Fee)</label>
 
-                <label for="mobilePhone">Mobile Phone Number:
-                    <input type="tel" id="mobilePhone" name="mobilePhone" title="Mobile Phone Number"
-                           autocomplete="tel"
-                           required>
-                </label>
+                        <input type="radio" id="bronze" name="membership" value="bronze">
+                        <label for="bronze">Bronze Membership</label>
 
-                <label for="businessName">Business/Organization's Name:
-                    <input type="text" id="businessName" name="businessName" title="Business/Organization's Name"
-                           autocomplete="organization" required>
-                </label>
+                        <input type="radio" id="silver" name="membership" value="silver">
+                        <label for="silver">Silver Membership</label>
 
-                <label for="membershipLevel">Membership Level:
-                    <select id="membershipLevel" name="membershipLevel">
-                        <option value="NP">Non Profit</option>
-                        <option value="Bronze">Bronze</option>
-                        <option value="Silver">Silver</option>
-                        <option value="Gold">Gold</option>
-                    </select>
-                </label>
+                        <input type="radio" id="gold" name="membership" value="gold">
+                        <label for="gold">Gold Membership</label>
+                    </div>
+                </fieldset>
 
-                <label for="description">Description:
-                    <textarea id="description" name="description" title="Description"></textarea>
-                </label>
+                <fieldset>
+                    <legend>Business/Organization Description</legend>
+                    <div>
+                        <label for="description">Description:</label> <br>
+                        <textarea id="description" name="description"
+                            title="Description of your business/organization"></textarea>
+                    </div>
+                </fieldset>
 
                 <input type="hidden" id="timestamp" name="timestamp" value="">
-                <div class="form-layer">
-                    <button class="body-button" type="submit">Join Now!</button>
-                </div>
+                <input type="submit" class="submitButton" value="join us">
             </form>
-        </section>
-        <aside>
-            <div class="card">
-                <h2>Membership Levels</h2>
-                <section id="non-profit" class="card learn-more">
-                    <h3>Non Profit</h3>
-                    <button class="body-button">Learn More</button>
-                    <dialog>
-                        <div class="dialog-title-bar">
-                            <h2>Non Profit Membership</h2>
-                            <button type="button" title="Close Dialog"></button>
-                        </div>
-                        <div class="dialog-body">
-                            <h4>Join Our Community for Free</h4>
-                            <p>As a non-profit organization, we believe in supporting local businesses. Join our
-                                platform for free and start connecting with your community.</p>
-                        </div>
-                    </dialog>
-                </section>
-                <section id="bronze" class="card learn-more">
-                    <h3>Bronze</h3>
-                    <button type="button" class="body-button">Learn More</button>
-                    <dialog>
-                        <div class="dialog-title-bar">
-                            <h2>Bronze Membership</h2>
-                            <button type="button" title="Close Dialog"></button>
-                        </div>
-                        <div class="dialog-body">
-                            <h4>Boost Your Business with Bronze</h4>
-                            <p>Our Bronze membership offers essential features to help your business grow. Enjoy
-                                increased visibility, exclusive discounts, and more for a small fee.</p>
-                        </div>
-                    </dialog>
-                </section>
-                <section id="silver" class="card learn-more">
-                    <h3>Silver</h3>
-                    <button type="button" class="body-button">Learn More</button>
-                    <dialog>
-                        <div class="dialog-title-bar">
-                            <h2>Silver Membership</h2>
-                            <button type="button" title="Close Dialog"></button>
-                        </div>
-                        <div class="dialog-body">
-                            <h4>Elevate Your Business with Silver</h4>
-                            <p>Our Silver membership provides advanced features to take your business to the next level.
-                                Benefit from premium listings, priority customer support, and valuable networking
-                                opportunities.</p>
-                        </div>
-                    </dialog>
-                </section>
-                <section id="gold" class="card learn-more">
-                    <h3>Gold</h3>
-                    <button type="button" class="body-button">Learn More</button>
-                    <dialog>
-                        <div class="dialog-title-bar">
-                            <h2>Gold Membership</h2>
-                            <button type="button" title="Close Dialog"></button>
-                        </div>
-                        <div class="dialog-body">
-                            <h4>Maximize Your Potential with Gold</h4>
-                            <p>Our Gold membership offers the ultimate package for businesses seeking maximum exposure
-                                and growth. Enjoy top-tier features, personalized support, and exclusive
-                                partnerships.</p>
-                        </div>
-                    </dialog>
-                </section>
+
+            <div class="membership-cards">
+                <h2>Memberships Levels</h2>
+                <div id="card1">
+                    <h2>Non-Profit Membership</h2>
+                    <button class="learnMore">Learn More</button>
+                </div>
+
+                <div id="card2">
+                    <h2>Bronze Membership</h2>
+                    <button class="learnMore">Learn More</button>
+                </div>
+
+                <div id="card3">
+                    <h2>Silver Membership</h2>
+                    <button class="learnMore">Learn More</button>
+                </div>
+
+                <div id="card4">
+                    <h2>Gold Membership</h2>
+                    <button class="learnMore">Learn More</button>
+                </div>
             </div>
-        </aside>
-    </div>
-</main>
-<footer>
+        </div>
+
+        <dialog id="membership-details" class="modal"> </dialog>
+    </main>
+
     <footer>
-        <div class="name-and-address">
-            <h2>Roatan Chamber Of Commerce</h2>
-            <p>Jones Ville, Roatan </p> 
-            <P></P>📧coc@r.com </P> <!--a fake mail-->
-            <P>📱504 0000-0000</p> <!--fake number-->
-        </div>
-        <div class="social-media-links">
-            <a href="https://facebook.com" target="_blank"> 
-                <img src="images/face2.png" alt="fb icon">
-            </a>
-            <a href="https://twitter.com" target="_blank">
-                <img src="images/twit.png" alt="twitter icon">
-            </a>
-            <a href="https://instagram.com" target="_blank">
-                <img src="images/insta.png" alt="instagram icon">
-            </a>
-        </div>
-        <div class="student-info">
-            <p><strong>WDD 231 Class Project</strong></p>
-            <p> 🔅Desire Vargas🔅</p>
-            
-            <p>©<span id="currentyear"></span> 🪼Roatan Chamber of Commerce</p>
-            <p> <strong>Last Modification: </strong><span id="lastModified"></span></p>
-        </div>
+        <p id="footer"></p>
     </footer>
 
 </body>
-</html
+
+</html>
