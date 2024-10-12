@@ -596,7 +596,7 @@ dialog {
     justify-self: center;
     border: none;
     border-radius: 10px;
-    box-shadow: 5px 5px 5px var(--Secondary-Color-Var);
+    box-shadow: 5px 5px 5px var(--accent2-color);
     width: 50%;
     max-width: 600px;
 }
