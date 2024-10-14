@@ -1,7 +1,7 @@
 :root {
     --Primary-Color: #41c2f5;
     --Secondary-Color: #65ebd0;
-    --Primary-Color-Var: #3486f9;
+    --Primary-Color-Var: hsl(215, 94%, 59%);
     --Secondary-Color-Var: #1da1d1;
 }
 
@@ -23,12 +23,12 @@
         overflow: hidden; /* Add this line */
     }
     .cardThanks h2 {
-        font-size: 30px;
+        font-size: 25px;
         font-weight: 500;
         
     }
     .cardThanks p {
-        font-size: 20px;
+        font-size: 15px;
         font-weight: 400;
     }
     #timestamp-display {
