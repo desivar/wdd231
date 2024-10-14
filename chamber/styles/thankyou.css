@@ -11,22 +11,25 @@
     }
     .cardThanks {
         padding: 30px;
+        border-radius: 10px;
+        border-color:black;
+    
         justify-items: center;
         text-align: center;
-        background-color: var(--tertiary-color);
-        width: 60%;
-        height: 60%;
+        background-color:#5fd6f1;
+        width: 40%;
+        height: 45%;
         row-gap: 10px;
         overflow: hidden; /* Add this line */
     }
     .cardThanks h2 {
         font-size: 30px;
-        font-weight: 600;
-        text-transform: uppercase;
+        font-weight: 500;
+        
     }
     .cardThanks p {
         font-size: 20px;
-        font-weight: 500;
+        font-weight: 400;
     }
     #timestamp-display {
         color: #777;
