@@ -5,7 +5,7 @@
             "address": "Lawson Rock, Roatan",
             "phone_number": 24453317,
             "website_url": "http://tuglianilaw.com/",
-            "image": "..chamber/images/logotugliani.png",
+            "image": "..images/logotugliani.png",
             "membership_level": 3,
             "type": "Law Services"
         },
@@ -14,7 +14,7 @@
             "address": "Lawson Rock, Sandy Bay ",
             "phone_number": 96203182,
             "website_url": " bayislandsescrow.com",
-            "image": "../chamber/images/escrowlogo.png",
+            "image": "..images/escrowlogo.png",
             "membership_level": 3,
             "type": "transactions"
         },
@@ -23,7 +23,7 @@
             "address": "Roatán, Sandy Bay, Honduras, Lawson Rock",
             "phone_number": 33730313,
             "website_url": "https://roatancowork.com/",
-            "image": "../chamber/images/office.jpg",
+            "image": "..images/office.jpg",
             "membership_level": 2,
             "type": "office"
         },
@@ -32,7 +32,7 @@
             "address": "Sandy Bay, Roatan",
             "phone_number": 24453055,
             "website_url": "https://www.roatanlifevacationrentals.com/",
-            "image": "../chamber/images/logo-rental.jpg",
+            "image": "..images/logo-rental.jpg",
             "membership_level": 1,
             "type": "rentals"
         },
@@ -41,7 +41,7 @@
             "address": "Roatán, Honduras, Gibson Bight, Alba Plaza Unit 2",
             "phone_number": 33730313,
             "website_url": "https://roatanet.com/listings/roatan-travel-network/",
-            "image": "..chamber/images/rtn-add-roatannet.jpg",
+            "image": "..images/rtn-add-roatannet.jpg",
             "membership_level": 2,
             "type": "network"
         },
@@ -50,7 +50,7 @@
             "address": "Dixon Cove, 34101 Roatán",
             "phone_number": 31930000,
             "website_url": "https://www.roatanferry.com/",
-            "image": "../chamber/images/ferry.jpg",
+            "image": "..images/ferry.jpg",
             "membership_level": 2,
             "type": "ferry"
         },
@@ -59,7 +59,7 @@
             "address": "west Bay,Roatan",
             "phone_number": 24072231,
             "website_url": "https://henrymorgan.hmresorts.com/",
-            "image": "../chamber/images/hmlogo.png",
+            "image": "..images/hmlogo.png",
             "membership_level": 1,
             "type": "hotel"
         }
