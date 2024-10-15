@@ -1,5 +1,5 @@
 // Fetch the data from the JSON file and display it
-fetch('..data/members.json')
+fetch('./chamber/data/members.json')
     .then(response => response.json())
     .then(data => displayDirectory(data));
 
