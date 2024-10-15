@@ -1,137 +1,199 @@
-//add content to footer
-const year = new Date().getFullYear();
-const lastModified = document.lastModified;
-const copyrightText = `&copy; ${year} Desire Vargas|Roatan, Honduras.<br><span class ="last-modified">Last Modification: ${lastModified}</span>`;
-const footerElement = document.getElementById('footer');
-footerElement.innerHTML = copyrightText;
+// Adding the year and last modified to the footer
+const currentYear = document.querySelector("#currentyear");
+const lastModified = document.querySelector("#lastModified");
 
-//add event listener to menu button and nav links
-const hamButton = document.querySelector('#menuButton');
-const navigation = document.querySelector('.navigation');
+currentYear.textContent = new Date().getFullYear();
+lastModified.textContent = document.lastModified;
+
+// Adding the functionality to the ham button
+const hamButton = document.querySelector('#menu');
+const navMenu = document.querySelector('.open-menu');
+const header = document.querySelector('.header');
 
 hamButton.addEventListener('click', () => {
-    navigation.classList.toggle('open');
     hamButton.classList.toggle('open');
+    navMenu.classList.toggle('open');
+    header.classList.toggle('gap');
 });
 
-// Weather cards
-const currentTemp = document.querySelector('#current-temp');
-const weatherIcon = document.querySelector('#weather-icon');
-const description = document.querySelector('#weather-desc');
-const weatherDetails = document.querySelector('#weather-details');
-
-//  Get the current weather data from the API
-const url = 'https://api.openweathermap.org/data/2.5/weather?lat=-32.95&lon=-60.69&units=metric&appid=5f9c58c75d5c2060c966f87b914145e4';
-
-//  Get JSON data from OpenWeatherMap API
-async  function apiFetch() {
-    try {
-        const response = await fetch(url)
-        if (response.ok) {
-            const data = await response.json();
-            console.log(data);
-            displayResults(data);
-        } else {
-            throw Error(await response.text());
-        }
-    } catch (error) {
-        console.log(error)
-    }
-}
-
-apiFetch();
-
-//  Current weather display results
-function displayResults(data) {
-    currentTemp.innerHTML = `${Math.round(data.main.temp)}&deg;C`;
-    const iconsrc = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
-    let desc = description.innerHTML = data.weather[0].description;
-    weatherDetails.innerHTML =  `High: ${Math.round(data.main.temp_max)}&deg;C<br>Low: ${Math.round(data.main.temp_min)}&deg;C<br>Humidity: ${data.main.humidity}%`;
-    weatherIcon.setAttribute('SRC', iconsrc);
-    weatherIcon.setAttribute('alt', desc);
-}
-
-// Get the forecast weather data from the API
-const forecastUrl =  'https://api.openweathermap.org/data/2.5/forecast?lat=-32.95&lon=-60.69&units=metric&appid=5f9c58c75d5c2060c966f87b914145e4';
-
-async function forecastFetch() {
-    try {
-        const response = await fetch(forecastUrl)
-        if (response.ok) {
-            const data = await response.json();
-            console.log(data);
-            displayResultsForecast(data);
-        } else {
-            throw Error(await response.text());
-        }
-    } catch (error) {
-        console.log(error)
-    }
-}
-
-forecastFetch();
-
-// Forecast weather display results
-function displayResultsForecast(data) {
-    const forecastCards = document.querySelectorAll('.forecast-card');
-    for (let i = 1; i < 4; i ++) { // Start from tomorrow (i = 1)
-        const startIndex = i * 8; // Start index for each day (readings every 3 hours)
-        const forecastDate = forecastCards[i - 1].querySelector('.forecastDate');
-        const forecastIcon = forecastCards[i - 1].querySelector('.forecast-icon');
-        const forecastTemp = forecastCards[i - 1].querySelector('.forecastTemp');
-        const forecastDesc = forecastCards[i - 1].querySelector('.forecast-desc');
-
-        forecastDate.innerHTML = `${new Date(data.list[startIndex].dt * 1000).toLocaleDateString()}`;
-        const iconUrl = `https://openweathermap.org/img/wn/${data.list[startIndex].weather[0].icon}@2x.png`;
-        forecastIcon.setAttribute('src', iconUrl);
-        forecastIcon.setAttribute('alt', data.list[startIndex].weather[0].description);
-        forecastTemp.innerHTML = `${Math.round(data.list[startIndex].main.temp)}°C`;
-        forecastDesc.innerHTML = data.list[startIndex].weather[0].description;
-    }
-}
-
-// Get member data
-const urlMembers = 'data/members.json';
-
+// Function to fetch members data
 async function getMembersData() {
-    const response = await fetch(urlMembers); //Store the response from the fetch() method
-    const data = await response.json(); //Convert the response to a JSON object
-    if (data && data.members) {
-        displayMembers(data.members);
-    } else {
-        throw Error(await response.text());
+    try {
+        const response = await fetch('../data/members.json'); // Make sure the path is correct
+        if (!response.ok) {
+            throw new Error(`Failed to fetch members data: ${response.status}`);
+        }
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Error fetching members data:', error);
+        return [];
     }
 }
 
-getMembersData();
+// Home Page scripts
+const weatherIcon = document.createElement('img');
+const weatherDisplay = document.querySelector('.weather-display');
+const weatherInfo = document.querySelector('#weather-info');
+const forecastInfo = document.querySelector('#forecast-weather-info');
+const advertising = document.querySelector('#advertising');
 
+const weatherUrl = 'https://api.openweathermap.org/data/2.5/weather?lat=12.113560033331286&lon=-86.2354811759951&appid=e4ecd0c975a7d843f411d8205c8a8aa3&units=metric';
+const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=12.113560033331286&lon=-86.2354811759951&cnt=24&appid=e4ecd0c975a7d843f411d8205c8a8aa3&units=metric`;
 
-// Randomly select two or three members with Gold or Silver membership level
-function getRandomMembers(members) {
-    const goldAndSilverMembers = members.filter(member => member.membershipLevel === "Gold Member" || member.membershipLevel === "Silver Member");
-    const randomMembers = [];
-    for (let i = 0; i < 3; i++) {
-        const randomIndex = Math.floor(Math.random() * goldAndSilverMembers.length);
-        randomMembers.push(goldAndSilverMembers[randomIndex]);
-        goldAndSilverMembers.splice(randomIndex, 1);
+const fecthingCurrentWeatherData = async () => {
+    try {
+        const weatherResponse = await fetch(weatherUrl);
+        if (!weatherResponse.ok) {
+            throw new Error(`Response status: ${weatherResponse.status}`);
+        }
+
+        const weatherData = await weatherResponse.json();
+        console.log(weatherData);
+        return weatherData;
+    } catch (error) {
+        console.log(error.message);
     }
-    return randomMembers;
+};
+
+const fetchingForecastWeather = async () => {
+    try {
+        const forecastResponse = await fetch(forecastUrl);
+        if (!forecastResponse.ok) {
+            throw new Error(`Response status: ${forecastResponse.status}`);
+        }
+
+        const forecastData = await forecastResponse.json();
+        return forecastData;
+    } catch (error) {
+        console.log(error.message);
+    }
+};
+
+const averageForecastTemp = async () => {
+    const forecastData = await fetchingForecastWeather();
+
+    const firstDayForecastData = forecastData.list.slice(0, 8);
+    const firstDayAverageTemp = firstDayForecastData.reduce((total, day) => total + day.main.temp, 0) / firstDayForecastData.length;
+
+    const secondDayForecastData = forecastData.list.slice(8, 16);
+    const secondDayAverageTemp = secondDayForecastData.reduce((total, day) => total + day.main.temp, 0) / secondDayForecastData.length;
+
+    const thirdDayForecastData = forecastData.list.slice(16, 24);
+    const thirdDayAverageTemp = thirdDayForecastData.reduce((total, day) => total + day.main.temp, 0) / thirdDayForecastData.length;
+
+    return {
+        firstDayData: { temp: firstDayAverageTemp, date: firstDayForecastData[0].dt_txt },
+        secondDayData: { temp: secondDayAverageTemp, date: secondDayForecastData[0].dt_txt },
+        thirdDayData: { temp: thirdDayAverageTemp, date: thirdDayForecastData[0].dt_txt }
+    };
+};
+
+async function populatingForecastWeather() {
+    const { firstDayData, secondDayData, thirdDayData } = await averageForecastTemp();
+
+    forecastInfo.innerHTML = `
+        <li>Tomorrow: <strong>${firstDayData.temp.toFixed(0)}&deg;C</strong></li>
+        <li>${new Date(secondDayData.date).toLocaleString('en-US', { weekday: 'long' })}: <strong>${secondDayData.temp.toFixed(0)}&deg;C</strong></li>
+        <li>${new Date(thirdDayData.date).toLocaleString('en-US', { weekday: 'long' })}: <strong>${thirdDayData.temp.toFixed(0)}&deg;C</strong></li>
+    `;
 }
 
-// Show randomly selected members in the "spotlights" section
-function displayMembers(members) {
-    const spotlightsSection = document.querySelector("#spotlights");
-    const randomMembers = getRandomMembers(members);
-    randomMembers.forEach(function(member) {
-        const spotlightHTML = `
-            <div class="spotlight">
-            <img src="${member.imageUrl}" alt="${member.name}" width="100px" heigth="100px">
-            <h3>${member.name}</h3>
-            <p>${member.phone}</p>
-            <p>${member.address}</p>
-            <p><a href="${member.website}" target="_blank">${member.website}</a></p>
-            <p>Membership Level: ${member.membershipLevel}</p>
-            </div>`;
-        spotlightsSection.innerHTML += spotlightHTML;
+function populatingCurrentWeather(data) {
+    weatherIcon.setAttribute('src', `https://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`);
+    weatherIcon.setAttribute('alt', 'The current weather icon');
+    weatherIcon.setAttribute('width', 150);
+    weatherIcon.setAttribute('height', 150);
+    weatherDisplay.appendChild(weatherIcon);
+
+    const sunriseTime = new Date(data.sys.sunrise * 1000).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    const sunsetTime = new Date(data.sys.sunset * 1000).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+    weatherInfo.innerHTML = `
+        <p><strong>${data.main.temp}&deg;</strong> C</p>
+        <p>${data.weather[0].description}</p>
+        <p>High: ${data.main.temp_max}&deg;</p>
+        <p>Low: ${data.main.temp_min}&deg;</p>
+        <p>Humidity: ${data.main.humidity}%</p>
+        <p>Sunrise: ${sunriseTime}</p>
+        <p>Sunset: ${sunsetTime}</p>
+    `;
+}
+
+const displayCurrentWeather = async () => {
+    const weatherData = await fecthingCurrentWeatherData();
+    if (weatherData) {
+        populatingCurrentWeather(weatherData);
+    }
+};
+
+function shuffleCompanies(companies) {
+    return companies.sort(() => Math.random() - 0.5);
+}
+
+const randomAdvertising = async () => {
+    const membersData = await getMembersData();
+    const filteredCompanies = membersData.filter(company => company.membershipLvl >= 2);
+    const randomCompanies = shuffleCompanies(filteredCompanies);
+    const selectedCompanies = randomCompanies.slice(0, 3);
+
+    selectedCompanies.forEach(company => {
+        advertising.innerHTML += `
+            <article class="home-card ads">
+                <div class="advertising-card-title">
+                    <h3>${company.name}</h3>
+                    <p>${company.tagline}</p>
+                </div>
+                <div class="advertising-info">
+                    <img src="${company.image}" alt="The icon of ${company.name}" width="110" height="110">
+                    <div>
+                        <p>Email: ${company.email}</p>
+                        <p>Phone: ${company.phoneNumber}</p>
+                        <a href="${company.websiteUrl}">${company.websiteUrl}</a>
+                    </div>
+                </div>
+            </article>
+        `;
     });
-}
+};
+
+// Adding the event listener and conditionals to manage the scripts across different pages
+document.addEventListener('DOMContentLoaded', () => {
+    if (document.body.id === 'home-page') {
+        displayCurrentWeather();
+        populatingForecastWeather();
+        randomAdvertising();
+    }
+
+    if (document.body.id === 'directory-page') {
+        membersDirectory(); // Make sure this function is defined
+
+        const gridButton = document.querySelector('#gridButton');
+        const listButton = document.querySelector('#listButton');
+        const cards = document.querySelector('.cards');
+
+        const swapingViews = (button) => {
+            if (button === 'list') {
+                gridButton.classList.remove('grid-button');
+                listButton.classList.add('list-button');
+                cards.classList.remove('grid-view');
+                cards.classList.add('list-view');
+            }
+
+            if (button === 'grid') {
+                gridButton.classList.add('grid-button');
+                listButton.classList.remove('list-button');
+                cards.classList.add('grid-view');
+                cards.classList.remove('list-view');
+            }
+        };
+
+        gridButton.addEventListener('click', () => {
+            swapingViews('grid');
+        });
+
+        listButton.addEventListener('click', () => {
+            swapingViews('list');
+        });
+    }
+});
