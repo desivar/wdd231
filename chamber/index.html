@@ -19,6 +19,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="preload" href="images/coral.jpg">
     <script src="scripts/home.js" defer></script>
+    <script>
+        // Script to update the last modified date automatically
+        document.addEventListener("DOMContentLoaded", () => {
+            const lastUpdateElement = document.getElementById("last-update");
+            lastUpdateElement.textContent = `Last updated: ${new Date(document.lastModified).toLocaleDateString()}`;
+        });
+    </script>
     <head>
         <body id="home-page">
             <header class="header">
