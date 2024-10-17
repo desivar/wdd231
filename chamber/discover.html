@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is the discover page for WDD231-Assignment example about how to a chamber of commerce">
+    <meta name="author" content="Desire Vargas">
+    <meta property="og:title" content="Discover Page| Roatan Chamber of Commerce"> 
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/desivar/WDD231/blob/main/chamber/index.html">
+    
+    <link rel="icon" href="images/fav.ico">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <title>Discover-Page</title>
+    <link rel="stylesheet" href="styles/calendar.css">
+    <link rel="stylesheet" href="styles/discover.css">
+    <link rel="stylesheet" href="styles/cards.css">
+ 
+    <script src="scripts/calendar.js"></script>
+    <script src="scripts/dates.js"></script>
+    
+</head>
+<body>
+            <header class="header">
+                    <img src="images/logochamb.png" alt="Roatan Chamber of Commerce" width="30%">
+        <h1>Discover</h1>
+                <nav class="open-menu">
+                    <ul class="nav-menu">
+                        <li><a href="index.html" >Home</a></li>
+                        <li><a href="directory.html">Directory</a></li>
+                        <li><a href="join.html">Join</a></li>
+                        <li><a href="discover.html" class="active">Discover</a></li>
+                    </ul>
+                </nav>
+        
+                <button id="menu" aria-label="Menu button"></button>
+        
+            
+    </header>
+    <main>
+            <div class='datepicker'>
+                <div class="datepicker-header"></div>
+
+              </div>
+        
+        <div>
+        <h2>Things to do at Roatan</h2>
+    <section class="cards-container">
+        <div class="card">
+            <img src="images/fish.jpg" alt="fish">
+            <h2>Tropical Fish</h2>
+            <p>Description for card 1</p>
+        </div>
+        <div class="card">
+            <img src="images/divers.jpg" alt="diving">
+            <h2>Diving</h2>
+            <p>Description for card 2</p>
+        </div>
+        <div class="card">
+            <img src="images/walkingbeac.jpeg" alt="walking at the beach">
+            <h2>Walk</h2>
+            <p>Description for card 3</p>
+        </div>
+        <div class="card">
+            <img src="images/coralb.jpg" alt="coral">
+            <h2>Coral</h2>
+            <p>Description for card 4</p>
+        </div>
+        <div class="card">
+            <img src="images/twoboats.jpg" alt="canoes">
+            <h2>Canoes</h2>
+            <p>Description for card 5</p>
+        </div>
+        <div class="card">
+            <img src="images/pardiseh.jpeg" alt="West Bay">
+            <h2>Hotel</h2>
+            <p>Description for card 6</p>
+        </div>
+        <div class="card">
+            <img src="images/West-Bay-Beach.jpg" alt="beach">
+            <h2>West Bay</h2>
+            <p>Description for card 7</p>
+        </div>
+        <div class="card">
+            <img src="images/beach.jpeg" alt="beach">
+            <h2>Beach</h2>
+            <p>Description for card 8</p>
+        </div>
+    </section>
+    <script src="scripts.js"></script>
+
+       
+        </section>
+    </main>
+    <footer>
+    
+            <div class="name-and-address">
+                <h2>Roatan Chamber Of Commerce</h2>
+                <p>Jones Ville, Roatan </p> 
+                <P></P>📧coc@r.com </P> <!--a fake mail-->
+                <P>📱504 0000-0000</p> <!--fake number-->
+            </div>
+            <div class="social-media-links">
+                <a href="https://facebook.com" target="_blank"> 
+                    <img src="images/face2.png" alt="fb icon">
+                </a>
+                <a href="https://twitter.com" target="_blank">
+                    <img src="images/twit.png" alt="twitter icon">
+                </a>
+                <a href="https://instagram.com" target="_blank">
+                    <img src="images/insta.png" alt="instagram icon">
+                </a>
+            </div>
+            <div class="student-info">
+                <p><strong>WDD 231 Class Project</strong></p>
+                <p> 🔅Desire Vargas🔅</p>
+                
+                <p>©<span id="currentyear"></span> 🪼Roatan Chamber of Commerce</p>
+                <p> <strong>Last Modification: </strong><span id="lastModified"></span></p>
+            </div>
+        
+       
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script>
+            $(document).ready(function() {
+                $(".datepicker").datepicker({
+                    prevText: '<i class="fa fa-fw fa-angle-left"></i>',
+                    nextText: '<i class="fa fa-fw fa-angle-right"></i>'
+                });
+            });
+        </script>
+    </body>
+    </html>
+    
+
