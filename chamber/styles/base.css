@@ -90,7 +90,7 @@ nav {
 
 /* Footer styles */
 footer {
-    background-color: var(--red);
+    background-color: var(--blue-dark);
     color: white;
     text-align: center;
     padding: 20px 0;

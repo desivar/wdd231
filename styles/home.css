@@ -1,185 +1,105 @@
-@charset "utf-8";
-
-/* |-| VARIABLES */
-:root {
-  /* Colors */
-  --neon-blue: #3F8EFC;
-  --Chrysler-blue: #3B28CC;
-  --Chefchaouen-blue: #2667FF;
-  --Jordy-blue: #87BFFF;
-
-  /* Fonts */
-  --heading-font: Oswald, sans-serif;
-  --para-font: "Roboto Condensed", sans-serif;
-}
-
-/* |-| GENERIC STYLES */
 * {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: var(--para-font);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--heading-font);
-}
-
-/* |-| HEADER */
-header {
-  background-color: var(--neon-blue);
-  color: var(--Jordy-blue);
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  padding: 1.2rem 0;
-  font-size: 0.9rem;
-}
-
-.profile-picture {
-  box-shadow: 1px 1px 10px #000;
-}
-
-.menu-icon {
-  display: inline-block;
-  cursor: pointer;
-}
-
-.bar1, .bar2, .bar3 {
-  width: 35px;
-  height: 5px;
-  background-color: var(--Jordy-blue);
-  margin: 6px 0;
-  transition: 0.4s;
-}
-
-/* Rotate first bar */
-.change .bar1 {
-  transform: translate(0, 11px) rotate(-45deg);
-}
-
-/* Fade out the second bar */
-.change .bar2 {opacity: 0;}
-
-/* Rotate last bar */
-.change .bar3 {
-  transform: translate(0, -11px) rotate(45deg);
-}
-
-/* |-| NAVIGATION */
-nav {
-  background-color: var(--neon-blue);
-  display: none;
-  flex-direction: column;
-  text-align: center;
-  font-size: 1.4rem;
-}
-
-nav a {
-  text-decoration: none;
-  padding: 0.8rem;
-  color: var(--chrysler-blue);
-  transition: 0.3s ease-in-out;
-}
-
-nav a:hover {
-  background-color: #2667FF;
-  color: white;
-}
-
-.show-nav {
-  display: flex;
-}
-
-.active {
-  background-color: #3B28CC;
-  color: #fff;
-  font-weight: 700;
-  text-decoration: underline;
-}
-
-/* |-| MAIN */
-main {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  margin: 1.5rem 1rem;
-  text-align: center;
-}
-
-main section {
-  border-radius: 4px 4px 0 0;
-  box-shadow: 1px 1px 10px #000;
-}
-
-main section h2 {
-  background-color: var(--Chefchaouen-blue);
-  color: var(--Jordy-blue);
   margin: 0;
-  padding: 1rem;
+  padding: 0;
+  box-sizing: border-box;
+ border: none;
+ outline: none;
+ font-family: "poppins", sans-serif;
 }
 
-.credits {
-  font-style: italic;
+:root {
+  --header-and-footer-background-color: #026c8a;
+  --nav-background-color: #00b4d8;
+  --nav-hover-color: #3959c2;
+  --header-and-footer-color:#ffff;
+  --nav-hover-background-color: #03045e;
+}
+body{ 
+background-color: var(--header-and-footer-color);
+text-align: center;
+min-height: 100vh;
+
 }
 
-.course-filters {
+
+
+header img {
+  max-width: 100%;
+  max-height: 90px;
+  margin: 5px ;
+}
+
+header{ display: flex; 
+background-color: var(--header-and-footer-background-color);
+color:var(--header-and-footer-color);
+align-items: center;
+justify-content:center;
+gap: 10px;
+padding: 25px 0px;
+
+}
+
+
+
+/* small view navigation */
+#menu {
+  font-size: 1.5rem;
+  border: 0;
+  background: none;
+  color: #ffff;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+#menu::before {
+  content: "☰";
+}
+
+#menu.open::before {
+  content: "❎";
+}
+
+.navigation  {
+  background-color: var(--nav-background-color);
+  padding: 5px;
+  display: none;/* initially hide navigation */
+}
+
+.navigation li {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 1rem 0.5rem;
-  border-bottom: 1px solid #999999;
+  flex-direction: column;
+  list-style: none;
+  color: #fff;
+  max-width: 700px;
+  margin: 1rem auto; 
 }
 
-.course-filters a {
-  background-color: #ADD7F6;
-  color: black;
-  border-radius: 4px;
-  display: inline-block;
-  padding: 0.5rem 1.5rem;
-  text-decoration: none;
-  transition: 0.3s ease-in-out;
-}
 
-.course-filters a:hover {
-  background-color: var(--neon-blue);
-  color: var(--charcoal);
-  text-decoration: underline;
-  font-weight: 700;
-}
-
-.courses {
+.navigation a {
   padding: 1rem;
-}
-
-.courses div {
-  margin: 0.5rem 0;
-  padding: 0.8rem;
-  border-radius: 4px;
-}
-
-.course-completed {
-  background-color: #87BFFF;
-  color: white;
-
-}
-
-div.course-not-completed {
-  background-color: #2667FF;
-  color: #ffffff;
-}
-
-/* |-| FOOTER */
-footer {
-  background-color: var(--Chefchaouen-blue);
-  color: var(--Jordy-blue);
   text-align: center;
-  padding: 1rem 0;
-  font-size: 1.1rem;
+  text-decoration: none;
+  color: black;
 }
+
+.navigation a:hover {
+  background-color: var(--nav-hover-background-color);
+  color:var(--header-and-footer-color);
+  font-weight: 700;
+  border-radius: 10px;
+}
+
+/* when the button is clicked - the open class is toggled (added/removed) */
+.navigation.show {
+  display: flex;
+}
+
+.active::before { 
+  content: "📍";  /* just a wayfinding symbol for the user */
+}
+
+
+
+  
+    

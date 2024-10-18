@@ -76,51 +76,47 @@ const courses = [
         ],
         completed: false
     }
-  ];
-  
-  const getCSECourses = (courses) => {
-      return courses.filter(course => course.subject === 'CSE');
-  };
-  
-  const getWDDCourses = (courses) => {
-      return courses.filter(course => course.subject === 'WDD');
-  };
-  
-  const getCredits = (courses) => {
-      const credits = courses.reduce(
-          (accumulator, course) => accumulator + course.credits,
-          0
-      );
-      return credits;
-  };
-  
-  // DOM elements.
-  const courseFilters = document.getElementById('course-filters');
-  const courseContainer = document.getElementById('courses');
-  
-  const renderHTML = (courses) => {
-      let html = `<div class="credits">Total Credits: ${getCredits(courses)}</div>`;
-      courses.forEach(course => {
-          const element = `<div class="course${course.completed ? '-completed' : '-not-completed'}">${course.subject} ${course.number}</div>`;
-          html += element;
-      });
-      courseContainer.innerHTML = html;
-  };
-  
-  renderHTML(courses);
-  
-  courseFilters.addEventListener('click', (event) => {
-      const target = event.target;
-      event.preventDefault();
-      switch (target.textContent.toLowerCase()) {
-          case 'all':
-              renderHTML(courses);
-              break;
-          case 'cse':
-              renderHTML(getCSECourses(courses));
-              break;
-          case 'wdd':
-              renderHTML(getWDDCourses(courses));
-              break;
-      }
-  });
+]
+
+const totalCreditsDiv = document.getElementById("totalCredits");
+const coursesSelector = document.getElementById("courses");
+const allCourses = document.getElementById("all");
+const wddCourses = document.getElementById("wdd");
+const cseCourses = document.getElementById("cse");
+
+showCourses(courses);
+
+allCourses.addEventListener("click", () => {
+    showCourses(courses);
+});
+wddCourses.addEventListener("click", () => {
+    showCourses(courses.filter(course => course.subject == "WDD"));
+});
+cseCourses.addEventListener("click", () => {
+    showCourses(courses.filter(course => course.subject == "CSE"));
+});
+
+
+function showCourses(filteredCourses) {
+    coursesSelector.innerHTML = "";
+    filteredCourses.forEach(course => {
+        const courseSubject = document.createElement("h3");
+
+        courseSubject.innerHTML = `<h3>${course.subject} ${course.number}</h3>`;
+
+        coursesSelector.appendChild(courseSubject)
+
+        if (course.completed === true) {
+            courseSubject.classList.add("completed");
+        }
+        else {
+            courseSubject.classList.add("incomplete");
+        }
+    });
+
+    const totalCredits = filteredCourses.reduce((total, course) => {
+        return total + course.credits;
+    }, 0);
+
+    totalCreditsDiv.innerHTML = `<h3>Total Required Credits: ${totalCredits}</h3>`;
+};

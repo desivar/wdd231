@@ -65,7 +65,7 @@
 
 /* Card styling */
 .home-card {
-    background-color: var(--yellow);
+    background-color: #8bd3f2;
     border: 1px solid var(--blue-dark);
     border-radius: 10px;
     padding: 20px;
@@ -90,3 +90,53 @@
     gap: 10px;
     margin-bottom: 10px;
 }
+/* Member card styles */
+#directory {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: center; /* Center items */
+    margin: 0 -10px; /* Negative margin for spacing */
+}
+
+.member-card {
+    border: 1px solid #ddd; /* Border around cards */
+    border-radius: 8px; /* Rounded corners */
+    margin: 10px; /* Space between cards */
+    padding: 15px; /* Space inside the card */
+    text-align: center; /* Center text */
+    background-color: #fff; /* White background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s; /* Smooth transform */
+}
+
+.member-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.member-card img {
+    border-radius: 50%; /* Rounded image */
+    max-width: 100px; /* Adjust size as needed */
+    margin-bottom: 10px; /* Space below image */
+}
+
+/* Styles for grid view */
+.grid .member-card {
+    width: calc(33.33% - 20px); /* 3 cards per row */
+}
+
+@media (max-width: 768px) {
+    .grid .member-card {
+        width: calc(50% - 20px); /* 2 cards per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .grid .member-card {
+        width: calc(100% - 20px); /* 1 card per row on the smallest screens */
+    }
+}
+
+  
+  
+  
+  
