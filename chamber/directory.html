@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directory</title>
+    <meta name="description" content="This is the Directory page for WDD231-Assignmennt">
+    <meta name="author" content="Desire Vargas">
+    <meta property="og:title" content="Directory Page| Roatan Chamber of Commerce"> 
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="#">
+    
+    <link rel="icon" href="images/fav.ico">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/directory.css">
+   
+    <script>
+        // Script to update the last modified date automatically
+        document.addEventListener("DOMContentLoaded", () => {
+            const lastUpdateElement = document.getElementById("last-update");
+            lastUpdateElement.textContent = `Last updated: ${new Date(document.lastModified).toLocaleDateString()}`;
+        });
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+   <!-- Header -->
+   <header>
+    <div class="header-content">
+        <img src="images/logochamb.png" alt="Logo"> 
+        <h1>Roatan Chamber Of Commerce</h1>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html" class="active">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+            <div class="sandwich-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </div>
+</header>  
+
+<!-- MAIN CONTENT-->
+<main>
+    <h2>Directory of Companies and Local Businesses</h2>
+    <p>"Welcome to the Roatan Chamber of Commerce! We are thrilled to have you visit our page.
+        Here, you'll find a vibrant community of passionate business leaders and entrepreneurs
+        dedicated to fostering growth and collaboration on our beautiful island. Whether you're
+        a local business owner, a potential investor, or simply exploring our dynamic community,
+        we are here to support and connect you. Let's embark on this journey together to elevate
+        our island's economic landscape. Welcome aboard!"
+    </p>
+    <div class="view-toggle">
+        <button id="gridView" class="active">Grid</button>
+        <button id="listView">List</button>
+    </div>
+    <section id="directory" class="grid"></section>
+</main>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <p>Desire Vargas</p> 
+        <p>Chamber of Commerce | Roatan, Honduras | WDD231</p>
+        <p id="last-update">Last updated: October 17, 2024</p>
+        <div class="social-links">
+            <a href="#"><img src="images/face2.png" alt="Facebook"></a>
+            <a href="#"><img src="images/insta.png" alt="Instagram"></a>
+            <a href="#"><img src="images/twit.png" alt="Twitter"></a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Toggle sandwich menu on small screens
+    document.querySelector('.sandwich-menu').addEventListener('click', function () {
+        this.classList.toggle('open');
+        document.querySelector('.menu').classList.toggle('active');
+    });
+</script>
+<script src="scripts/directory.js"></script>
+</body>
+</html>

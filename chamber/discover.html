@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover </title>
+    <meta name="description" content="This is the Discover page for WDD231-Assignment, is an example about ho wto make a discover page'>
+    <meta name="author" content="Desire D Vargas">
+    <meta property="og:title" content="Discover Page| Roatan Chamber of Commerce"> 
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="#">
+    
+    <link rel="icon" href="images/fav.ico">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/discover.css">
+    <link rel="stylesheet" href="styles/calendar.css">
+    <link rel="stylesheet" href="styles/cards.css">
+    <script src="scripts/calendar.js"></script>
+    
+    <script>
+        // Script to update the last modified date automatically
+        document.addEventListener("DOMContentLoaded", () => {
+            const lastUpdateElement = document.getElementById("last-update");
+            lastUpdateElement.textContent = `Last updated: ${new Date(document.lastModified).toLocaleDateString()}`;
+        });
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+   <!-- Header -->
+   <header>
+    <div class="header-content"> 
+        <img src="images/logochamb.png" alt="Logo" > 
+        <h1>Roatan Chamber Of commerce</h1> 
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+        </ul>
+        <div class="sandwich-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+</header>  
+
+<!-- MAIN CONTENT-->
+<main>
+    <div class='datepicker'>
+        <div class="datepicker-header"></div>
+
+      </div>
+
+<div>
+<h2>Things to do at Roatan</h2>
+<section class="cards-container">
+<div class="card">
+    <img src="images/fish.jpg" alt="fish">
+    <h2>Tropical Fish</h2>
+    <p>Description for card 1</p>
+</div>
+<div class="card">
+    <img src="images/divers.jpg" alt="diving">
+    <h2>Diving</h2>
+    <p>Description for card 2</p>
+</div>
+<div class="card">
+    <img src="images/walkingbeac.jpg" alt="walking at the beach">
+    <h2>Walk</h2>
+    <p>Description for card 3</p>
+</div>
+<div class="card">
+    <img src="images/coralb.jpg" alt="coral">
+    <h2>Coral</h2>
+    <p>Description for card 4</p>
+</div>
+<div class="card">
+    <img src="images/twoboats.png" alt="canoes">
+    <h2>Canoes</h2>
+    <p>Description for card 5</p>
+</div>
+<div class="card">
+    <img src="images/pardiseh.jpg" alt="West Bay">
+    <h2>Hotel</h2>
+    <p>Description for card 6</p>
+</div>
+<div class="card">
+    <img src="images/West-Bay-Beach.jpg" alt="beach">
+    <h2>West Bay</h2>
+    <p>Description for card 7</p>
+</div>
+<div class="card">
+    <img src="images/beach.jpg" alt="beach">
+    <h2>Beach</h2>
+    <p>Description for card 8</p>
+</div>
+</section>
+<script src="scripts.js"></script>
+
+
+</section>
+</main>
+
+
+
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <p> Desire D Vargas</p> 
+        <p> Chamber of Commerce|Roatan, Honduras| WDD231</p>
+        <p id="last-update">Last updated: October 17, 2024</p>
+        <div class="social-links">
+            <a href="#"><img src="images/face2.png" alt="Facebook"></a>
+            <a href="#"><img src="images/insta.png" alt="Instagram"></a>
+            <a href="#"><img src="images/twit.png" alt="Twitter"></a>
+        </div>
+    </div>
+</footer>
+
+</footer>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+    $(document).ready(function() {
+        $(".datepicker").datepicker({
+            prevText: '<i class="fa fa-fw fa-angle-left"></i>',
+            nextText: '<i class="fa fa-fw fa-angle-right"></i>'
+        });
+    });
+</script>
+</body>
+</html>
+
+
+
+
+

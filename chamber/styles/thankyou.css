@@ -1,0 +1,39 @@
+:root {
+    --Primary-Color: #41c2f5;
+    --Secondary-Color: #65ebd0;
+    --Primary-Color-Var: hsl(215, 94%, 59%);
+    --Secondary-Color-Var: #1da1d1;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1920px) {
+    main {
+        padding: 20px;
+    }
+    .cardThanks {
+        padding: 30px;
+        border-radius: 10px;
+        border-color:black;
+    
+        justify-items: center;
+        text-align: center;
+        background-color:#5fd6f1;
+        width: 40%;
+        height: 45%;
+        row-gap: 10px;
+        overflow: hidden; /* Add this line */
+    }
+    .cardThanks h2 {
+        font-size: 25px;
+        font-weight: 500;
+        
+    }
+    .cardThanks p {
+        font-size: 15px;
+        font-weight: 400;
+    }
+    #timestamp-display {
+        color: #777;
+        margin-top: 30px;
+        font-size: 20px; /* Correct the typo */
+    }
+}

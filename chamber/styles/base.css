@@ -1,0 +1,144 @@
+/* Colors from the palette */
+:root {
+    --blue-light: #06aed5;
+    --blue-dark: #086788;
+    --yellow: #f0c808;
+    --cream: #fff1d0;
+    --red: #dd1c1a;
+}
+
+/* Basic styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--white);
+}
+
+/* Header styles */
+header {
+    background-color: var(--blue-dark);
+    color: white;
+    padding: 10px 20px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header img {
+    max-height: 150px;
+    margin-right: 20px;
+}
+/* Logo aligned to the left */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+/* Page name centered */
+.page-name {
+    flex-grow: 1;
+    text-align: center;
+}
+
+/* Navigation styles */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 10px;
+}
+
+.menu {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: underline;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+.menu li a:hover {
+    background-color: var(--yellow);
+    border-radius: 5px;
+}
+
+/* Sandwich menu styles */
+.sandwich-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    position: absolute;
+    right: 20px;
+}
+
+.sandwich-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+}
+
+/* Footer styles */
+footer {
+    background-color: var(--red);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+.footer-content {
+    text-align: center; /* Center the footer content */
+    padding: 20px 0; /* Add some padding to the footer */
+   
+}
+
+
+.social-links img {
+    width: 25px;
+    height: 25px;
+    margin: 0 10px;
+    align-items: right;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        background-color: var(--blue-dark);
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        width: 150px;
+        border-radius: 8px;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .sandwich-menu {
+        display: flex;
+    }
+
+    .sandwich-menu.open .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .sandwich-menu.open .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .sandwich-menu.open .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}

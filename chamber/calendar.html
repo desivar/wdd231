@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poster and Calendar Page</title>
+    <meta name="description" content="This is calendar for the WDD231-Assignmennt">
+    <meta name="author" content="Desire Vargas">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .calendar-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .datepicker {
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Calendar Page</h1>
+    </header>
+    <main>
+        <div class="calendar-container">
+            <input type="text" class="datepicker">
+        </div>
+    </main>
+    <footer>
+        <p>Desire Vargas</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".datepicker").datepicker({
+                prevText: '<i class="fa fa-fw fa-angle-left"></i>',
+                nextText: '<i class="fa fa-fw fa-angle-right"></i>'
+            });
+        });
+    </script>
+</body>
+</html>

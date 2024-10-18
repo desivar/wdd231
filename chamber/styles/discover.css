@@ -1,0 +1,43 @@
+main {
+    padding: 2rem;
+    text-align: center;
+}
+
+
+
+
+.calendar {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+
+
+h2{
+    font-size: 30px;
+    background-color: #22bffd;
+}
+.cards-container {
+    margin-top: 2rem;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.card {
+    background-color: #f0f0f0;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+    
+    
+    

@@ -1,0 +1,224 @@
+/* Basic styles for member cards */
+/* Add this to your directory.css file */
+/* General styles */
+body {
+    font-family: 'Open Sans', sans-serif; /* Apply the font */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background-color: #fff; /* Set a white background */
+}
+
+header {
+    background-color: #06aed5; /* Header background color */
+    color: #fff; /* Header text color */
+    padding: 20px; /* Padding for the header */
+}
+
+.header-content {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space out items */
+}
+
+header img {
+    height: 60px; /* Set logo height */
+}
+
+nav ul.menu {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    display: flex; /* Display as flexbox */
+}
+
+nav ul.menu li {
+    margin: 0 15px; /* Space between menu items */
+}
+
+nav ul.menu li a {
+    color: #fff; /* Link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+nav ul.menu li a:hover {
+    color: #fff; /* Change color on hover */
+}
+
+.sandwich-menu {
+    display: none; /* Hide by default */
+    cursor: pointer; /* Pointer cursor */
+}
+
+.sandwich-menu.open .bar:nth-child(1) {
+    transform: rotate(45deg); /* Rotate the first bar */
+}
+
+.sandwich-menu.open .bar:nth-child(2) {
+    opacity: 0; /* Hide the second bar */
+}
+
+.sandwich-menu.open .bar:nth-child(3) {
+    transform: rotate(-45deg); /* Rotate the third bar */
+}
+/* Hamburger menu styles */
+.sandwich-menu {
+    display: none; /* Hide by default */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.sandwich-menu .bar {
+    width: 30px;
+    height: 4px;
+    background-color: white; /* Change color as needed */
+    margin: 4px;
+    transition: all 0.3s ease;
+}
+/* Show the hamburger menu on smaller screens */
+@media (max-width: 768px) {
+    .sandwich-menu {
+        display: flex; /* Show on small screens */
+    }
+
+    .menu {
+        display: none; /* Hide menu by default */
+        flex-direction: column; /* Stack menu items */
+        width: 100%; /* Full width on mobile */
+        position: absolute; /* Position absolute for overlay effect */
+        top: 60px; /* Adjust as needed to position below header */
+        left: 0;
+        background-color: #086788; /* Match header background */
+        z-index: 1000; /* Ensure it sits above other content */
+    }
+
+    .menu.active {
+        display: flex; /* Show menu when active */
+    }
+}
+
+/* Footer styles */
+footer {
+    background-color: #086788; /* Change as needed */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-content {
+    margin: 0 auto;
+}
+
+.social-links a img {
+    width: 30px; /* Adjust size as needed */
+    margin: 0 5px;
+}
+/* Main content styles */
+main {
+    padding: 20px; /* Padding for main content */
+    text-align: center; /* Center text */
+}
+
+h2 {
+    margin-bottom: 20px; /* Space below heading */
+}
+
+.view-toggle {
+    margin: 20px 0; /* Space around the toggle buttons */
+}
+
+.view-toggle button {
+    padding: 10px 20px; /* Button padding */
+    margin-right: 5px; /* Space between buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    border: none; /* No border */
+    background-color: #f0c808; /* Button background color */
+    color: #fff; /* Button text color */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.view-toggle button:hover {
+    background-color: #e1b700; /* Darker on hover */
+}
+
+/* Member card styles */
+#directory {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: center; /* Center items */
+    margin: 0 -10px; /* Negative margin for spacing */
+}
+
+.member-card {
+    border: 1px solid #ddd; /* Border around cards */
+    border-radius: 8px; /* Rounded corners */
+    margin: 10px; /* Space between cards */
+    padding: 15px; /* Space inside the card */
+    text-align: center; /* Center text */
+    background-color: #fff; /* White background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s; /* Smooth transform */
+}
+
+.member-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.member-card img {
+    max-width: 100%; /* Responsive images */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Styles for grid view */
+.grid .member-card {
+    width: calc(33.33% - 20px); /* 3 cards per row */
+}
+
+/* Styles for list view */
+.list .member-card {
+    width: calc(100% - 20px); /* Full width for list */
+    display: block; /* Stack vertically */
+}
+
+/* Footer styles */
+footer {
+    background-color: #086788; /* Footer background color */
+    color: #fff; /* Footer text color */
+    padding: 20px; /* Padding for the footer */
+    position: relative; /* Position relative for layout */
+    text-align: center; /* Center footer text */
+}
+
+.footer-content {
+    margin: 0 auto; /* Center footer content */
+}
+
+.footer-content p {
+    margin: 5px 0; /* Space between footer paragraphs */
+}
+
+.social-links a {
+    margin: 0 10px; /* Space between social icons */
+}
+
+.social-links img {
+    width: 30px; /* Icon size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Clearfix for main content */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Alternate background colors for list items */
+.member-card.even {
+    background-color: #f0f0f0; /* Light gray for even items */
+}
+
+.member-card.odd {
+    background-color: #e0e0e0; /* Darker gray for odd items */
+}
+

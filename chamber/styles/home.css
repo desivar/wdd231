@@ -1,0 +1,92 @@
+
+
+/* Basic styling for the main container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--white);
+}
+
+/* Title styling */
+.title {
+    text-align: center;
+    font-size: 2em;
+    margin-top: 20px;
+    color: var(--blue-dark);
+}
+
+
+/* Home section hero styling */
+.hero {
+    background-image: url('../images/coral.jpg'); /* Ensure this path is correct */
+    background-size: cover;
+    background-position: center;
+    height: 400px; /* Adjust the height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--blue-dark);
+    text-align: center;
+    position: relative;
+}
+
+.content-hero {
+    background-color: rgba(255, 255, 255, 0.8); /* Optional background overlay */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+.hero-phrase {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.join-button {
+    background-color: var(--blue-dark);
+    color: var(--cream);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.join-button:hover {
+    background-color: var(--blue-light);
+}
+/* Flexbox layout for home section */
+.home {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    margin-top: 20px;
+}
+
+/* Card styling */
+.home-card {
+    background-color: var(--yellow);
+    border: 1px solid var(--blue-dark);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1 1 30%;
+    max-width: 300px;
+    min-width: 250px;
+}
+
+/* Weather display styling */
+.weather-display {
+    background-color: var(--cream);
+    border: 1px solid var(--blue-dark);
+    border-radius: 8px;
+    padding: 10px;
+}
+
+/* Forecast list styling */
+#forecast-weather-info li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}

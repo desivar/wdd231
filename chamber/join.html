@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join </title>
+    <meta name="description" content="This is the Join Page for WDD231-Assignmennt |an example about how to make a join page">
+    <meta name="author" content="Desire D Vargas">
+    <meta property="og:title" content="Join| Roatan Chamber of Commerce"> 
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="#">
+    
+    <link rel="icon" href="images/fav.ico">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <script>
+        // Script to update the last modified date automatically
+        document.addEventListener("DOMContentLoaded", () => {
+            const lastUpdateElement = document.getElementById("last-update");
+            lastUpdateElement.textContent = `Last updated: ${new Date(document.lastModified).toLocaleDateString()}`;
+        });
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+   <!-- Header -->
+   <header>
+    <div class="header-content">
+        <div class="logo">Logo</div>
+        <div class="page-name">Join</div>
+    </div>
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html" class="active">Join</a></li>
+        </ul>
+        <div class="sandwich-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+</header>  
+
+<!-- MAIN CONTENT-->
+<main>
+    <div class="main-content">
+        <form method="get" action="thankyou.html">
+            <fieldset>
+                <legend>Membership Application Form</legend>
+                <div>
+                    <label for="firstName">First Name: *</label>
+                    <input type="text" id="firstName" name="firstName" title="Applicant's First Name" required
+                        autocomplete="given-name">
+                </div>
+                <div>
+                    <label for="lastName">Last Name: *</label>
+                    <input type="text" id="lastName" name="lastName" title="Applicant's First Name" required
+                        autocomplete="given-name">
+                </div>
+                <div>
+                    <label for="orgTitle">Organizational Title: </label>
+                    <input type="text" id="orgTitle" name="orgTitle" title="Your Title in the Organization"
+                        pattern="[A-Za-z\s-]{7,}" autocomplete="organization-title">
+                </div>
+                <div class="form-item">
+                    <label for="email">Email: *</label>
+                    <input type="email" id="email" name="email" title="Applicant's Email" required
+                        autocomplete="email" placeholder="example@example.com">
+                </div>
+                <div>
+                    <label for="phone">Phone: *</label>
+                    <input type="tel" id="phone" name="phone" title="Applicant's Phone Number" required
+                        autocomplete="tel">
+                </div>
+                <div>
+                    <label for="orgName">Organization Name: * </label>
+                    <input type="text" id="orgName" name="orgName" title="Business/Organization Name" required
+                        autocomplete="organization">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Select Membership Level</legend>
+                <div class="radio-group">
+                    <input type="radio" id="NP" name="membership" value="NP">
+                    <label for="NP">Non-Profit (No Fee)</label>
+
+                    <input type="radio" id="bronze" name="membership" value="bronze">
+                    <label for="bronze">Bronze Membership</label>
+
+                    <input type="radio" id="silver" name="membership" value="silver">
+                    <label for="silver">Silver Membership</label>
+
+                    <input type="radio" id="gold" name="membership" value="gold">
+                    <label for="gold">Gold Membership</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Business/Organization Description</legend>
+                <div>
+                    <label for="description">Description:</label> <br>
+                    <textarea id="description" name="description"
+                        title="Description of your business/organization"></textarea>
+                </div>
+            </fieldset>
+
+            <input type="hidden" id="timestamp" name="timestamp" value="">
+            <input type="submit" class="submitButton" value="join us">
+        </form>
+
+        <div class="membership-cards">
+            <h2>Memberships Levels</h2>
+            <div id="card1">
+                <h2>Non-Profit Membership</h2>
+                <button class="learnMore">Learn More</button>
+            </div>
+
+            <div id="card2">
+                <h2>Bronze Membership</h2>
+                <button class="learnMore">Learn More</button>
+            </div>
+
+            <div id="card3">
+                <h2>Silver Membership</h2>
+                <button class="learnMore">Learn More</button>
+            </div>
+
+            <div id="card4">
+                <h2>Gold Membership</h2>
+                <button class="learnMore">Learn More</button>
+            </div>
+        </div>
+    </div>
+
+    <dialog id="membership-details" class="modal"> </dialog>
+</main>
+
+
+
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <p> Desire D Vargas</p> 
+        <p> Chamber of Commerce|Roatan, Honduras| WDD231</p>
+        <p id="last-update">Last updated: October 17, 2024</p>
+        <div class="social-links">
+            <a href="#"><img src="path/to/facebook-icon.png" alt="Facebook"></a>
+            <a href="#"><img src="path/to/instagram-icon.png" alt="Instagram"></a>
+            <a href="#"><img src="path/to/twitter-icon.png" alt="Twitter"></a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Toggle sandwich menu on small screens
+    document.querySelector('.sandwich-menu').addEventListener('click', function () {
+        this.classList.toggle('open');
+        document.querySelector('.menu').classList.toggle('active');
+    });
+</script>
+</body>
+</html>
+
+
