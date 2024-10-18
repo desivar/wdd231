@@ -1,43 +1,89 @@
-main {
-    padding: 2rem;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    background-color: #086788;
     text-align: center;
+    padding: 1em 0;
 }
 
+main {
+    padding: 20px;
+}
 
-
-
-.calendar {
-    margin-top: 1rem;
-    padding: 1rem;
-    background-color: #f0f0f0;
+.info {
+    background-color: #e2fdff;
+    padding: 15px;
+    margin-bottom: 20px;
     border-radius: 8px;
-    display: inline-block;
 }
 
-
-
-h2{
-    font-size: 30px;
-    background-color: #22bffd;
+.calendar-info {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-bottom: 20px;
 }
-.cards-container {
-    margin-top: 2rem;
+
+.info-text, .calendar {
+    flex: 1;
 }
 
 .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-around;
+}
+
+.card-item {
+    flex: 1 1 calc(33% - 20px);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .cards {
+        flex-direction: column;
+    }
+
+    .card-item {
+        flex: 1 1 100%;
+    }
+
+    .calendar-info {
+        flex-direction: column;
+    }
+}
+.grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
+    grid-template-columns: 200px 1fr; /* Sidebar width and main content */
+    height: 100vh; /* Full viewport height */
 }
 
-.card {
+.sidebar {
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+.main-content {
+    background-color: #ffffff;
+    padding: 20px;
+}
+main {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    padding: 10px;
     background-color: #f0f0f0;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-
-    
-    
-    
+.main-content {
+    flex: 1;
+    padding: 10px;
+}
