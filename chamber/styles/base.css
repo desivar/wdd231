@@ -40,7 +40,7 @@ header {
 /* Page name centered */
 .page-name {
     flex-grow: 1;
-    text-align: center;
+    text-align: left;
 }
 
 /* Navigation styles */

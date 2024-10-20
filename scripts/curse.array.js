@@ -120,3 +120,4 @@ function showCourses(filteredCourses) {
 
     totalCreditsDiv.innerHTML = `<h3>Total Required Credits: ${totalCredits}</h3>`;
 };
+
