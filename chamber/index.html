@@ -5,44 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roatan Chamber of Commerce</title>
     
-    <meta name="description" content="This is the home page for WDD231-Assignment | Home| example about how to a chamber of commerce">
+    <meta name="description" content="This is the home page for WDD231-Assignment | Home | example about how to start a chamber of commerce">
     <meta name="author" content="Desire Vargas">
-    <meta property="og:title" content="Home Page| Roatan Chamber of Commerce"> 
+    <meta property="og:title" content="Home Page | Roatan Chamber of Commerce"> 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://desivar.github.io/wdd231/chamber/index.html">
     
     <link rel="icon" href="images/fav.ico">
     <link rel="stylesheet" href="styles/normalize.css">
-   <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/home.css">
-
     
-    
-    <script src="scripts/weather.js"></script>
-   
+    <script src="scripts/weather.js" defer></script>
 
     <script>
         // Script to update the last modified date automatically
         document.addEventListener("DOMContentLoaded", () => {
             const lastUpdateElement = document.getElementById("last-update");
-            lastUpdateElement.textContent = `Last updated: ${new Date(document.lastModified).toLocaleDateString()}`;
+            if (lastUpdateElement) {
+                lastUpdateElement.textContent = `Last updated: ${new Date(document.lastModified).toLocaleDateString()}`;
+            }
         });
     </script>
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header -->
-    <header>
+    <header class="header">
         <div class="header-content">
-
-            <header class="header">
-                <img src="images/logochamb.png" alt="Logo" >
-           
-
+            <img src="images/logochamb.png" alt="Roatan Chamber of Commerce Logo">
             <h1>Roatan Chamber of Commerce</h1>
-
         </div>
         <nav>
             <ul class="menu">
@@ -58,62 +53,49 @@
             </div>
         </nav>
     </header>
-   <!-- Hero Section -->
-<section class="hero">
-    <div class="content-hero">
-        <h2 class="fade-animation hero-phrase">Every business begins with an idea</h2>
 
-
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="content-hero">
+            <h2 class="fade-animation hero-phrase">Every business begins with an idea</h2>
             <a href="join.html" class="join-button fade-animation">Join Us</a>
         </div>
     </section>
-   <div>
-        
+
     <main class="container">
-        <h2 class="title">🐠Roatan🐠</h2>
+        <h2 class="title">🐠 Roatan 🐠</h2>
         <section class="home">
             <article class="home-card">
                 <h3>Events</h3>
-
                 <ul class="upcoming-events">
-                    <li>Gastronomic Fair-October 15 </li>
-                    <li>Pirates Week-Nov 15</li>
-                    <li>Santa's Parade-December 20</li>
+                    <li>Gastronomic Fair - October 15</li>
+                    <li>Pirates Week - November 15</li>
+                    <li>Santa's Parade - December 20</li>
                 </ul>
             </article>
 
-        <article class="home-card">
-            <h3>Current Weather</h3>
-
-            <div class="weather-display">
-                <div id="weather-info">
-
+            <article class="home-card">
+                <h3>Current Weather</h3>
+                <div class="weather-display">
+                    <div id="weather-info"></div>
                 </div>
-            </div>
+            </article>
 
-        </article>
+            <article class="home-card">
+                <h3>Weather Forecast</h3>
+                <ul id="forecast-weather-info"></ul>
+            </article>
+        </section>
 
-        <article class="home-card">
-            <h3>Weather Forecast</h3>
-            <ul id="forecast-weather-info">
-
-            </ul>
-        </article>
-    </section>
-
-    <h2 class="title">Roatan's CoC is waiting for you!
-    </h2>
-    <section id="members-container">
-        
-        
-    </section>
-</main>
+        <h2 class="title">Roatan's CoC is waiting for you!</h2>
+        <section id="members-container"></section>
+    </main>
 
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <p> Desire Vargas</p> 
-            <p> Chamber of Commerce|Roatan, Honduras| WDD231</p>
+            <p>Desire Vargas</p> 
+            <p>Chamber of Commerce | Roatan, Honduras | WDD231</p>
             <p id="last-update">Last updated: October 17, 2024</p>
             <div class="social-links">
                 <a href="#"><img src="images/face2.png" alt="Facebook"></a>
@@ -130,6 +112,6 @@
             document.querySelector('.menu').classList.toggle('active');
         });
     </script>
-    <script src="scripts/home.js"></script>
+    <script src="scripts/home.js" defer></script>
 </body>
 </html>
