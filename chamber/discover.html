@@ -3,147 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discover </title>
-    <meta name="description" content="This is the Discover page for WDD231-Assignment, is an example about ho wto make a discover page">
+    <title>Discover</title>
+    <meta name="description" content="This is the Discover page for WDD231-Assignment, is an example about how to make a discover page">
     <meta name="author" content="Desire D Vargas">
-    <meta property="og:title" content="Discover Page| Roatan Chamber of Commerce"> 
+    <meta property="og:title" content="Discover Page | Roatan Chamber of Commerce"> 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://desivar.github.io/wdd231/chamber/discover.html">
     
-    <link rel="icon" href="images/fav.ico">
+    <link rel="icon" href="images/fav.1.ico">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/discover.css">
     <link rel="stylesheet" href="styles/calendar.css">
     <link rel="stylesheet" href="styles/cards.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content"> 
+            <img src="images/logochamb.png" alt="Logo"> 
+            <h1>Roatan Chamber Of Commerce</h1> 
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                </ul>
+                <div class="sandwich-menu">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </nav>
+        </div>
+    </header>  
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <aside class="sidebar">
+            <div id="visitor-info"></div>
+        </aside>
+
+        <section class="info">
+            <h1>Roatan, Honduras</h1>
+            
+                <section>Things to do at Roatan</section>
+                <div class="card">
+                    <img src="images/divers.jpg" alt="diving">
+                    <h2>Dive</h2>
+                
+                </div>
+                
+                <div class="card">
+                    <img src="images/coralb.jpg" alt="coral">
+                    <h2> Visit the Coral Acerrifes</h2>
+                    
+                </div>
+                <div class="card">
+                    <img src="images/twoboats.png" alt="canoes">
+                    <h2>Go to the beach</h2>
+                
+                </div>
+        </section>
+        <div class='main-content'>
+            <div class='datepicker'>
+            
+                <div class="datepicker-header"></div>
+                <h1>Arrecifes</h1>
+                
+            </div>
+            <div class="datepicker-footer"></div>
+            <p>Roatán is a coral island. Situated atop an exposed ancient coral reef, it rises to about 270 m (890 ft) above sea level. The easternmost quarter of the island is separated by a 15-meter-wide channel through the mangrove forest.
+
+            </p>
+            <h3>Facts</h3>
+            <ul>
+                <li>Roatán is a tropical paradise with stunning beaches.</li>
+                <li>Roatán is known for its exceptional diving and snorkeling opportunities. </li>
+                <li>One of the most unique residents of Roatán is the famous Roatán sloth.</li>
+                <li>English is the first language of native islanders, regardless of race, and Spanish is spoken second, whereas mainland Honduras is Spanish-speaking.</li>
+            </ul>
+
+    
+
+            </section>
+ <div>
+    
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>Desire D Vargas</p> 
+            <p>Chamber of Commerce | Roatan, Honduras | WDD231</p>
+            <p id="last-update">Last updated: October 17, 2024</p>
+            <div class="social-links">
+                <a href="#"><img src="images/face2.png" alt="Facebook"></a>
+                <a href="#"><img src="images/insta.png" alt="Instagram"></a>
+                <a href="#"><img src="images/twit.png" alt="Twitter"></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script Loading Order -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="scripts/calendar.js"></script>
     <script src="scripts/visitors.inform.js"></script>
-    
+    <script src="scripts/discover.js"></script>
+
     <script>
         // Script to update the last modified date automatically
         document.addEventListener("DOMContentLoaded", () => {
             const lastUpdateElement = document.getElementById("last-update");
             lastUpdateElement.textContent = `Last updated: ${new Date(document.lastModified).toLocaleDateString()}`;
         });
-    </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-
-</head>
-<body>
-   <!-- Header -->
-   <header>
-    <div class="header-content"> 
-        <img src="images/logochamb.png" alt="Logo" > 
-        <h1>Roatan Chamber Of commerce</h1> 
-    <nav>
-        <ul class="menu">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="discover.html">Discover</a></li>
-            <li><a href="directory.html">Directory</a></li>
-            <li><a href="join.html">Join</a></li>
-        </ul>
-        <div class="sandwich-menu">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-    </nav>
-</header>  
-
-<!-- MAIN CONTENT-->
-<main>
-    <aside class="sidebar">
-        <div id="visitor-info"></div>
-    </aside>
-
-    <div class='main-content'>
-        <!-- Existing content like calendar, info, and cards here -->
-    
-
-
-    <div class='datepicker'>
-        <div class="datepicker-header"></div>
-<h1>Roatan, Honduras</h1>
-      </div>
-      <section class="info">
-        <h2>Pick a day!</h2>
-        <p>Do you want to enjoy a unforgettable vacation?.
-            Just pick a day and we will show you the best activities to do in Roatan.
-        </p>
-    </section>
-
-
-
-<section class="cards-container">
-
-<div class="card">
-    <img src="images/divers.jpg" alt="diving">
-    <h2>Diving</h2>
-    <p>Enjoy the crystal water to go dive</p>
-</div>
-
-<div class="card">
-    <img src="images/coralb.jpg" alt="coral">
-    <h2>Coral</h2>
-    <p>There's a colorfull coral arrecife waiting for you</p>
-</div>
-<div class="card">
-    <img src="images/twoboats.png" alt="canoes">
-    <h2>Canoes</h2>
-    <p>Rent a canoe!</p>
-</div>
-<div class="card">
-    <img src="images/pardiseh.jpg" alt="West Bay">
-    <h2>Book a place</h2>
-    <p>There's a good places to stay</p>
-</div>
-
-<div class="card">
-    <img src="images/beach.jpg" alt="beach">
-    <h2>Swimming</h2>
-    <p>Relax in the pristine West Bay Beach</p>
-</div>
-</section>
-<script src="scripts.js"></script>
-
-
-</section>
-</main>
-
-
-
-<!-- Footer -->
-<footer>
-    <div class="footer-content">
-        <p> Desire D Vargas</p> 
-        <p> Chamber of Commerce|Roatan, Honduras| WDD231</p>
-        <p id="last-update">Last updated: October 17, 2024</p>
-        <div class="social-links">
-            <a href="#"><img src="images/face2.png" alt="Facebook"></a>
-            <a href="#"><img src="images/insta.png" alt="Instagram"></a>
-            <a href="#"><img src="images/twit.png" alt="Twitter"></a>
-        </div>
-    </div>
-</footer>
-
-</footer>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script>
-    $(document).ready(function() {
-        $(".datepicker").datepicker({
-            prevText: '<i class="fa fa-fw fa-angle-left"></i>',
-            nextText: '<i class="fa fa-fw fa-angle-right"></i>'
+        // Initialize the datepicker
+        $(document).ready(function() {
+            $(".datepicker").datepicker({
+                prevText: '<i class="fa fa-fw fa-angle-left"></i>',
+                nextText: '<i class="fa fa-fw fa-angle-right"></i>',
+                dateFormat: "mm/dd/yy" // Example date format
+            });
         });
-    });
-</script>
+    </script>
 </body>
 </html>
-
-
-
-
-

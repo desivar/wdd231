@@ -11,38 +11,26 @@ header, footer {
 }
 
 main {
-    padding: 20px;
+    padding: 15px;
 }
 
 .info {
-    background-color: #e2fdff;
+    background-color: white;
     padding: 15px;
-    margin-bottom: 20px;
+    margin-bottom: auto;
     border-radius: 8px;
 }
 
 .calendar-info {
     display: flex;
-    gap: 20px;
+    gap: 35px;
     align-items: flex-start;
     margin-bottom: 20px;
 }
 
 .info-text, .calendar {
     flex: 1;
-}
-
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: space-around;
-}
-
-.card-item {
-    flex: 1 1 calc(33% - 20px);
-    box-sizing: border-box;
-    text-align: center;
+    position:center;
 }
 
 @media (max-width: 768px) {
@@ -86,4 +74,51 @@ main {
 .main-content {
     flex: 1;
     padding: 10px;
+}
+/* Add this to your existing CSS file */
+
+.main-content {
+    display: flex;
+    flex-direction: row; /* Align items side by side */
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.datepicker {
+    flex: 1 1 300px; /* Allow the datepicker to grow and shrink */
+    margin-right: 20px; /* Space between datepicker and other sections */
+}
+
+.info {
+    flex: 1 1 300px; /* Allow the info section to grow and shrink */
+    margin-right: 20px; /* Space between info and cards */
+}
+
+.cards-container {
+    flex: 1 1 300px; /* Allow the cards to grow and shrink */
+    display: flex;
+    flex-direction: column; /* Stack cards vertically */
+}
+
+.card {
+    margin-bottom: 15px; /* Space between cards */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column; /* Stack everything vertically on smaller screens */
+    }
+    
+    .datepicker {
+        margin-right: 0; /* Remove right margin on small screens */
+    }
+    
+    .info {
+        margin-right: 0; /* Remove right margin on small screens */
+    }
+
+    .cards-container {
+        width: 100%; /* Full width on small screens */
+    }
 }
