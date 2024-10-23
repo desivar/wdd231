@@ -1,124 +1,88 @@
-body {
-    font-family: Arial, sans-serif;
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-header, footer {
-    background-color: #086788;
-    text-align: center;
-    padding: 1em 0;
-}
-
-main {
-    padding: 15px;
-}
-
-.info {
-    background-color: white;
-    padding: 15px;
-    margin-bottom: auto;
-    border-radius: 8px;
-}
-
-.calendar-info {
-    display: flex;
-    gap: 35px;
-    align-items: flex-start;
-    margin-bottom: 20px;
-}
-
-.info-text, .calendar {
-    flex: 1;
-    position:center;
-}
-
-@media (max-width: 768px) {
-    .cards {
-        flex-direction: column;
-    }
-
-    .card-item {
-        flex: 1 1 100%;
-    }
-
-    .calendar-info {
-        flex-direction: column;
-    }
-}
-.grid-container {
-    display: grid;
-    grid-template-columns: 200px 1fr; /* Sidebar width and main content */
-    height: 100vh; /* Full viewport height */
-}
-
-.sidebar {
-    background-color: #f1f1f1;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    line-height: 1.6;
     padding: 20px;
 }
 
-.main-content {
-    background-color: #ffffff;
-    padding: 20px;
-}
+/* Layout styling */
 main {
     display: flex;
-}
-
-.sidebar {
-    width: 250px;
-    padding: 10px;
-    background-color: #f0f0f0;
-}
-
-.main-content {
-    flex: 1;
-    padding: 10px;
-}
-/* Add this to your existing CSS file */
-
-.main-content {
-    display: flex;
-    flex-direction: row; /* Align items side by side */
+    gap: 20px;
     justify-content: space-between;
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
-.datepicker {
-    flex: 1 1 300px; /* Allow the datepicker to grow and shrink */
-    margin-right: 20px; /* Space between datepicker and other sections */
+/* Sidebar styling */
+.sidebar {
+    flex: 1;
+    background-color: #e2fdff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Info section styling */
 .info {
-    flex: 1 1 300px; /* Allow the info section to grow and shrink */
-    margin-right: 20px; /* Space between info and cards */
+    flex: 2;
+    padding: 20px;
 }
 
-.cards-container {
-    flex: 1 1 300px; /* Allow the cards to grow and shrink */
+.activities {
     display: flex;
-    flex-direction: column; /* Stack cards vertically */
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .card {
-    margin-bottom: 15px; /* Space between cards */
+    flex: 1 1 30%;
+    background-color: #e2fdff;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Media Queries for Responsiveness */
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.main-content {
+    flex: 1;
+    background-color: #e2fdff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.datepicker h1 {
+    background-color: #086788;
+    color: black;
+    background-image: url('../images/coralb.jpg');
+    padding: 60px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+/* Responsive layout for smaller screens */
 @media (max-width: 768px) {
-    .main-content {
-        flex-direction: column; /* Stack everything vertically on smaller screens */
-    }
-    
-    .datepicker {
-        margin-right: 0; /* Remove right margin on small screens */
-    }
-    
-    .info {
-        margin-right: 0; /* Remove right margin on small screens */
+    main {
+        flex-direction: column;
     }
 
-    .cards-container {
-        width: 100%; /* Full width on small screens */
+    .activities {
+        flex-direction: column;
+    }
+
+    .card {
+        flex: 1 1 100%;
     }
 }

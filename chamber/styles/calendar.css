@@ -19,10 +19,12 @@
     box-shadow: 0 0 50px 0 rgba(0,0,0,0.2);
     margin: 50px auto;
     overflow: hidden;
+  }
+
     .datepicker-header {
       height: 250px;
-      background-image: url('../images/coral-fish.jpg');
-      background-position: center center;
+      background-image: url('../images/coralb.jpg');
+      background-position:  center;
       background-size: 100%;
     }
     .ui-datepicker-inline {
@@ -42,7 +44,7 @@
         font-size: 1.4em;
         padding: 0 10px;
         margin-top: -10px;
-        color: #CCC;
+        color: #086788;
       }
       
       .ui-datepicker-next {
@@ -54,7 +56,7 @@
       width: 100%;
       text-align: center;
       thead {
-        color: #CCC;
+        color: black;
       }
       
       tr {
@@ -63,7 +65,7 @@
         }
       }
       a {
-        color: #444;
+        color: #086788;
         text-decoration: none;
         display: block;
         margin: 0 auto;
@@ -80,7 +82,7 @@
         color: #D24D57;
       }
     }
-  }
+  
   
   
   
