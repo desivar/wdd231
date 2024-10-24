@@ -102,12 +102,16 @@ footer {
 }
 
 
+.social-links {
+    display: flex;
+    justify-content: flex-end;
+}
 .social-links img {
     width: 25px;
     height: 25px;
     margin: 0 10px;
-    align-items: right;
 }
+
 
 /* Responsive design */
 @media (max-width: 768px) {
