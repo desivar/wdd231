@@ -1,0 +1,267 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: Arial, sans-serif;
+  background-color: white;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+  background-color: #5465ff; /* blue*/
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover, nav ul li a:active {
+  text-decoration: underline;
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+/* Main Layout */
+main {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+/* Sidebar Styles */
+.sidebar {
+  width: 30%; /* Increased width for more content */
+  background-color: #FFFAE8; /* Pastel Yellow */
+  padding: 20px;
+  border: 2px solid #788bff; /* Light Pink */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+  margin-bottom: 10px;
+  color: #5465ff;
+}
+
+.sidebar .class-list {
+  margin-bottom: 20px;
+}
+
+#messages {
+  margin-top: 20px;
+  background-color: #FFD1DC;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+
+ 
+
+/* Content Area */
+.content {
+  flex: 1;
+}
+
+h1 {
+  color: #5465ff;
+  margin-bottom: 20px;
+}
+
+.columns {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex: 1;
+  min-width: 250px;
+}
+
+.certificate {
+  background-color: #FFD1DC; /* Light Pink */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.class-list {
+  margin-top: 10px;
+}
+
+.class-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.class-item input[type="checkbox"] {
+  accent-color: #788bff;
+  width: 20px;
+  height: 20px;
+}
+
+/* Text input for GPA */
+.class-item input[type="text"] {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #FFD1DC;
+  background-color: #FFF0F5;
+  color: #333;
+  width: 50px;
+}
+
+/* Progress Bar */
+.progress-bar {
+  background-color: #FFF0F5; /* Lighter pink */
+  border-radius: 20px;
+  margin-top: 15px;
+  height: 20px;
+  position: relative;
+  width: 100%;
+}
+
+.progress-bar-fill {
+  background-color: #788bff;
+  height: 100%;
+  border-radius: 20px;
+  transition: width 0.3s ease;
+}
+
+/* Confetti Animation */
+#confetti {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 100;
+}
+
+.confetti-piece {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #788bff;
+  animation: fall 3s linear infinite, rotate 3s linear infinite;
+  border-radius: 50%;
+}
+
+@keyframes fall {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(100vh); }
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(720deg); }
+}
+
+/* Footer Styles */
+footer {
+  background-color: #5465ff;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  main {
+      flex-direction: column;
+  }
+  
+  .menu-toggle {
+      display: block;
+  }
+  
+  nav ul {
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+      background-color: #788bff;
+      position: absolute;
+      right: 0;
+      top: 60px;
+      padding: 10px;
+      width: 100%;
+  }
+
+  nav ul.show {
+      display: flex;
+  }
+
+  .columns {
+      flex-direction: column;
+  }
+}
+/* Sidebar Styles */
+.sidebar {
+  width: 30%; /* Increased width for more content */
+  background-color: #FFFAE8; /* Pastel Yellow */
+  padding: 20px;
+  border: 2px solid #FFD1DC; /* Light Pink */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+  margin-bottom: 10px;
+  color: #FF6F91;
+}
+
+.sidebar .class-list {
+  margin-bottom: 20px;
+}
+
+#messages {
+  margin-top: 20px;
+  background-color: #FFD1DC;
+  padding: 10px;
+  border-radius: 5px;
+}

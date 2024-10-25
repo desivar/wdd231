@@ -1,0 +1,77 @@
+/* Contact Page Styles */
+.contact-form {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: var(--primary-color); /* Use the primary pastel color */
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 40px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 10px;
+    border: 2px solid var(--accent-color); /* Use the accent pastel color */
+    border-radius: 5px;
+    font-size: 1em;
+    color: var(--text-color);
+    background-color: white;
+    transition: border-color 0.3s;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.contact-form button {
+    background-color: var(--accent-color);
+    border: none;
+    color: white;
+    padding: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contact-form button:hover {
+    background-color: var(--primary-color);
+}
+
+/* Map section */
+.map {
+    padding: 60px 20px;
+    background-color: var(--secondary-color); /* Use a secondary pastel color */
+    text-align: center;
+}
+
+.map h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 30px 15px;
+    }
+    .map {
+        padding: 30px 15px;
+    }
+}

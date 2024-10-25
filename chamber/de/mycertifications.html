@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Progress Tracker|BYU-I Pathway Worldwide</title>
+    <link rel="stylesheet" href="styles/mycert.css">
+    <script src="scripts/getdates.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">Certificate Progress Tracker|BYU-I</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="mycertifications.html">Certificates</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="menu-toggle">☰</div>
+        </nav>
+    </header>
+    <main>
+        <aside class="sidebar">
+            <h2>General Classes</h2>
+            <div class="class-list" id="general-classes">
+                <!-- General classes 1 to 12 -->
+                <div class="class-item"><input type="checkbox" id="gen1" onchange="updateSidebarProgress('general')"> Writing & Reasoning Fundation</div>
+                <div class="class-item"><input type="checkbox" id="gen2" onchange="updateSidebarProgress('general')"> Advancing Writing in Profesional Context</div>
+                <div class="class-item"><input type="checkbox" id="gen3" onchange="updateSidebarProgress('general')"> Math for the Real World</div>
+                <div class="class-item"><input type="checkbox" id="gen4" onchange="updateSidebarProgress('general')"> Online University Success</div>
+                <div class="class-item"><input type="checkbox" id="gen5" onchange="updateSidebarProgress('general')"> PersonalHealth and Wellness</div>
+                <div class="class-item"><input type="checkbox" id="gen6" onchange="updateSidebarProgress('general')"> Sustaining Human Life</div>
+                <div class="class-item"><input type="checkbox" id="gen7" onchange="updateSidebarProgress('general')"> General Class 7</div>
+                <div class="class-item"><input type="checkbox" id="gen8" onchange="updateSidebarProgress('general')"> General Class 8</div>
+                <div class="class-item"><input type="checkbox" id="gen9" onchange="updateSidebarProgress('general')"> General Class 9</div>
+                <div class="class-item"><input type="checkbox" id="gen10" onchange="updateSidebarProgress('general')"> General Class 10</div>
+                <div class="class-item"><input type="checkbox" id="gen11" onchange="updateSidebarProgress('general')"> General Class 11</div>
+                <div class="class-item"><input type="checkbox" id="gen12" onchange="updateSidebarProgress('general')"> General Class 12</div>
+            </div>
+
+            <h2>Religion Classes</h2>
+            <div class="class-list" id="religion-classes">
+                <!-- Religion classes 1 to 7 -->
+                <div class="class-item"><input type="checkbox" id="rel1" onchange="updateSidebarProgress('religion')"> The Eternal Family</div>
+                <div class="class-item"><input type="checkbox" id="rel2" onchange="updateSidebarProgress('religion')"> Foundation of the Restauration</div>
+                <div class="class-item"><input type="checkbox" id="rel3" onchange="updateSidebarProgress('religion')"> Jesuscrist Everlasting Gospel</div>
+                <div class="class-item"><input type="checkbox" id="rel4" onchange="updateSidebarProgress('religion')"> Teaching and Doctrines of the Book of Mormon</div>
+                <div class="class-item"><input type="checkbox" id="rel5" onchange="updateSidebarProgress('religion')"> Religion Class 5</div>
+                <div class="class-item"><input type="checkbox" id="rel6" onchange="updateSidebarProgress('religion')"> Religion Class 6</div>
+                <div class="class-item"><input type="checkbox" id="rel7" onchange="updateSidebarProgress('religion')"> Religion Class 7</div>
+            </div>
+            
+            <div id="messages"></div>
+            
+        </aside>
+
+        <section class="content">
+            <h1>Certificates</h1>
+            <div class="columns">
+                <div class="certificate column">
+                    <h2>PathwayConnect</h2>
+                    <div class="class-list">
+                        <div class="class-item"><input type="checkbox" onchange="updateProgress(1, 4)"> PC101</div>
+                        <div class="class-item"><input type="checkbox" onchange="updateProgress(1, 4)"> PC102</div>
+                        <div class="class-item"><input type="checkbox" onchange="updateProgress(1, 4)"> PC103</div>
+                        <div class="class-item"><input type="checkbox" onchange="updateProgress(1, 4)"> Introduction to Programming</div>
+                        
+                    </div>
+                    <progress id="progress1" class="progress-bar" max="100" value="0"></progress>
+                </div>
+
+                <div class="certificate column">
+                    <h2>Web and Computer Programming</h2>
+                    <div class="class-list">
+
+                        <div class="class-item"><input type="checkbox" onchange="updateProgress(2, 6)"> Web Fundamentals</div>
+                        <div class="class-item"><input type="checkbox" onchange="updateProgress(2, 6)"> JavaScript</div>
+                        <div class="class-item"><input type="checkbox" onchange="updateProgress(2, 6)"> Programming with Functions</div>
+                        <div class="class-item"><input type="checkbox" onchange="updateProgress(2, 6)"> Programming with Classes</div>
+                        <div class="class-item"><input type="checkbox" onchange="updateProgress(2, 6)"> Dynamic Fundamentals</div>
+                        <div class="class-item"><input type="checkbox" onchange="updateProgress(2, 6)"> Web Frontend Development I</div>
+                    </div>
+                    <progress id="progress2" class="progress-bar" max="100" value="0"></progress>
+                </div>
+
+                <div class="certificate column">
+                    <h2>Web Development</h2>
+                    <div class="class-list">
+                        <div class="class-item"><input type="checkbox" onchange="updateProgress(3, 5)"> Introduction to Data Bases</div>
+                        <div class="class-item"><input type="checkbox" onchange="updateProgress(3, 5)"> Front End Development II</div>
+                        <div class="class-item"><input type="checkbox" onchange="updateProgress(3, 5)"> Web Backend Development</div>
+                        <div class="class-item"><input type="checkbox" onchange="updateProgress(3, 5)"> Web Services</div>
+                        <div class="class-item"><input type="checkbox" onchange="updateProgress(3, 5)"> Web Full Stack</div>
+                    </div>
+                    <progress id="progress3" class="progress-bar" max="100" value="0"></progress>
+                </div>
+
+                <div class="certificate column">
+                    <h2>Software Development</h2>
+                    <div class="class-list">
+                        <div class="class-item"><input type="checkbox" onchange="updateProgress(4, 6)"> Programming with Data Structure</div>
+                        <div class="class-item"><input type="checkbox" onchange="updateProgress(4, 6)"> Software Test</div>
+                        <div class="class-item"><input type="checkbox" onchange="updateProgress(4, 6)"> Professional Readiness</div>
+                        <div class="class-item"><input type="checkbox" onchange="updateProgress(4, 6)"> Apply Programming</div>
+                        <div class="class-item"><input type="checkbox" onchange="updateProgress(4, 6)"> .Net Software Development</div>
+                        <div class="class-item"><input type="checkbox" onchange="updateProgress(4, 6)"> Software Eng. Principles</div>
+                    </div>
+                    <progress id="progress4" class="progress-bar" max="100" value="0"></progress>
+                </div>
+                <div class="certificate column">
+                <h2>Degrees</h2>
+                <div class="class-list">
+                    <div class="class-item"><input type="checkbox" onchange="updateProgress(5, 2)"> Asociated Degree in Software Development</div>
+                    <div class="class-item"><input type="checkbox" onchange="updateProgress(5, 2)"> Bachelor's Degree in Software Development</div>
+                
+                </div>
+            </div>
+        </section>
+    
+    
+
+
+        <!-- Confetti effect for completion -->
+        <div id="confetti"></div>
+        <script src="scripts/confetti.js"></script>
+    </main>
+    
+    <footer>
+        <p>©<span id="year"></span> 🌸Desire Vargas 🌸</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+        <div class="social-links">
+            <a href="#"><img src="images/face2.png" alt="Facebook"></a>
+            <a href="#"><img src="images/insta.png" alt="Instagram"></a>
+            <a href="#"><img src="images/twit.png" alt="X"></a>
+        </div>
+    </footer>
+    
+    <script src="scripts/mycert.js"></script>
+    <script src="scripts/confetti.js"></script>
+    
+</body>
+</html>

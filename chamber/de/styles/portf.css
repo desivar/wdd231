@@ -1,0 +1,194 @@
+/* General Styles  */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+    background-color:white;
+    color: #333;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #5465ff;
+    color: white;
+  }
+  
+  
+  .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-left: 20px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+  
+  nav ul li a.active, nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .menu-toggle {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    nav ul {
+      display: none;
+    }
+    .menu-toggle {
+      display: block;
+    }
+  }
+  
+  /* Hero Section (Unchanged) */
+  .hero {
+    background-color: #788bff;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+  }
+  
+  .hero h1 {
+    font-size: 3em;
+  }
+  
+  .hero p {
+    font-size: 1.5em;
+    margin-top: 10px;
+  }
+  
+  /* About Me Section (Unchanged) */
+  .about-me {
+    background-color: #9bb1ff;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .about-me h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .about-me p {
+    font-size: 1.2em;
+  }
+  
+  /* Cover Flow Carousel Styles */
+  .skills {
+    background-color: white;
+    color: #333;
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .skills h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .scrollsnap-carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px; /* Allows the 3D effect */
+    overflow-x: hidden;
+    height: 250px;
+    position: relative;
+  }
+  
+  .slide {
+    display: inline-block;
+    width: 15%;
+    height: 150px;
+    margin: 0 10px;
+    background-color: #70d6dd;
+    border-radius: 10px;
+    line-height: 150px;
+    text-align: center;
+    font-size: 1.2em;
+    color: #333;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    position: absolute;
+    transform-origin: center center;
+  }
+  
+  /* Applying 3D transform for cover flow effect */
+  .slide:nth-child(1) {
+    transform: translateX(-200%) rotateY(60deg) scale(0.7);
+    opacity: 0.5;
+  }
+  
+  .slide:nth-child(2) {
+    transform: translateX(-100%) rotateY(30deg) scale(0.85);
+    opacity: 0.75;
+  }
+  
+  .slide:nth-child(3) {
+    transform: translateX(0%) rotateY(0deg) scale(1);
+    opacity: 1;
+    z-index: 2;
+  }
+  
+  .slide:nth-child(4) {
+    transform: translateX(100%) rotateY(-30deg) scale(0.85);
+    opacity: 0.75;
+  }
+  
+  .slide:nth-child(5) {
+    transform: translateX(200%) rotateY(-60deg) scale(0.7);
+    opacity: 0.5;
+  }
+  
+  .slide:nth-child(6) {
+    transform: translateX(250px) rotateY(-70deg) scale(0.6);
+    opacity: 0.35;
+  }
+  @media (max-width: 768px) {
+    .slide {
+      width: 30%;
+    }
+  }
+  
+  /* Footer (Unchanged) */
+  footer {
+    background-color: #5465ff;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+  }
+  
+  .social-links {
+    margin-top: 10px;
+  }
+  
+  .social-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 5px;
+  }
+  
+  .social-links a:hover {
+    text-decoration: underline;
+  }
+  
