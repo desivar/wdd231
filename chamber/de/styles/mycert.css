@@ -135,15 +135,6 @@ h1 {
   height: 20px;
 }
 
-/* Text input for GPA */
-.class-item input[type="text"] {
-  padding: 5px;
-  border-radius: 5px;
-  border: 1px solid #FFD1DC;
-  background-color: #FFF0F5;
-  color: #333;
-  width: 50px;
-}
 
 /* Progress Bar */
 .progress-bar {
@@ -240,28 +231,4 @@ footer a:hover {
       flex-direction: column;
   }
 }
-/* Sidebar Styles */
-.sidebar {
-  width: 30%; /* Increased width for more content */
-  background-color: #FFFAE8; /* Pastel Yellow */
-  padding: 20px;
-  border: 2px solid #FFD1DC; /* Light Pink */
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
 
-.sidebar h2 {
-  margin-bottom: 10px;
-  color: #FF6F91;
-}
-
-.sidebar .class-list {
-  margin-bottom: 20px;
-}
-
-#messages {
-  margin-top: 20px;
-  background-color: #FFD1DC;
-  padding: 10px;
-  border-radius: 5px;
-}
