@@ -159,13 +159,26 @@ body, html {
     opacity: 0.5;
   }
   
-  .slide:nth-child(6) {
-    transform: translateX(250px) rotateY(-70deg) scale(0.6);
-    opacity: 0.35;
-  }
+
+
   @media (max-width: 768px) {
+    /* Make the container scrollable */
+    .scrollsnap-carousel {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 10px; /* Add spacing between cards if desired */
+    }
+  
+    /* Style each slide for smaller screens */
     .slide {
-      width: 30%;
+      flex: 0 0 80%; /* Each card takes 80% of the viewport width */
+      scroll-snap-align: start; /* Align each card to start of the view */
+    }
+  
+    /* Optional: Remove any transform or styling that might interfere */
+    .slide .content-wrapper {
+      transform: none;
     }
   }
   
