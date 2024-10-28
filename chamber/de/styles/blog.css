@@ -1,25 +1,36 @@
-body, html {
+* General Styles  */
+body {
   margin: 0;
   padding: 0;
   font-family: 'Arial', sans-serif;
   box-sizing: border-box;
-  background-color:white;
+  background-color: white;
   color: #333;
 }
 
 header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; /* corrected */
   padding: 20px;
   background-color: #5465ff;
   color: white;
+  border: #333;
+
+
 }
-
-
-.logo {
+h1{
   font-size: 1.5em;
   font-weight: bold;
+}
+h2{
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+}
+.logo-img {
+  max-width: 200px; /* Adjust as needed */
+  height: auto;
 }
 
 nav ul {
@@ -39,7 +50,8 @@ nav ul li a {
   font-weight: bold;
 }
 
-nav ul li a.active, nav ul li a:hover {
+nav ul li a.active,
+nav ul li a:hover {
   text-decoration: underline;
 }
 
@@ -51,13 +63,12 @@ nav ul li a.active, nav ul li a:hover {
 
 @media (max-width: 768px) {
   nav ul {
-    display: none;
+      display: none;
   }
   .menu-toggle {
-    display: block;
+      display: block;
   }
 }
-
 
 
 /* Hero Section */

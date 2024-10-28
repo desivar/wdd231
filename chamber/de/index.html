@@ -3,21 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio| Desire Vargas</title>
-    <link rel="stylesheet" href="styles/portf.css">
-    <link rel="stylesheet" href="styles/header.css">
+    <title>Portfolio | Desire Vargas</title>
+    <meta name="description" content="This is the home page for WDD231-Assignment is the home page for my porfolio">
+    <meta name="author" content="Desire Vargas">
+    <meta property="og:title" content="Home Page | My Portfolio"> 
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://">
+    <meta property="og:img" content="#">
+    <link rel="icon" href="images/">
+
+    <link rel="stylesheet" href="../de/normalize.css">
+    <link rel="stylesheet" href="../de/styles/portf.css">
+    
+
     <script src="scripts/getdates.js"></script>
-    
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 <body>
     <header>
-        <div class="logo">MyPortfolio</div>
-        <link rel="images" href="images/">
+        <div class="right-section">
+            <img src="images/logoport.png" alt="Logo" class="logo-img">
+        </div>
+        <div class="center-section">
+            <h1 class="glassmorphism-title">MyPortfolio</h1>
+        </div>
         <nav>
             <ul>
-                <li><a href="index.html" class=active>Home</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="mycertifications.html">Certificates</a></li>
                 <li><a href="project.html">Blog</a></li>
                 <li><a href="contac.html">Contact</a></li>
@@ -26,72 +38,75 @@
         </nav>
         <div class="menu-toggle">☰</div>
     </header>
-
     <main>
         <section class="hero" data-aos="fade-up">
+           <div class="glass-text">
             <h1>Hello, I'm Desire Vargas</h1>
-            <p>A Web and Programmer Designer</p>
+            <p>A Software Developer & Web Designer</p>
         </section>
-
+        <div>
         <section class="about-me" data-aos="fade-left">
             <h2>About Me</h2>
             <p>Welcome! I create interactive and optimized web solutions. I specialize in web development and programming, using modern tools and techniques to bring ideas to life.</p>
         </section>
-
         <section class="skills" data-aos="fade-right">
-            <h2>Skills</h2>
-            <div class="scrollsnap-carousel">
-                <div class="slide">
-                    <div class="content">
-                        <div class="content-wrapper">
-                            Python, C#
+            <section class="skills" data-aos="fade-right">
+                <h2>Skills</h2>
+                <div class="scrollsnap-carousel">
+                    <div class="slide">
+                        <div class="content">
+                            <div class="content-wrapper">
+                                Python
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="content">
+                            <div class="content-wrapper">
+                                HTML, CSS
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="content">
+                            <div class="content-wrapper">
+                                JavaScript
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="content">
+                            <div class="content-wrapper">
+                                C#, .Net
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="content">
+                            <div class="content-wrapper">
+                                MySQL
+                   
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="slide">
-                    <div class="content">
-                        <div class="content-wrapper">
-                            HTML, CSS
-                        </div>
-                    </div>
-                </div>
-                <div class="slide">
-                    <div class="content">
-                        <div class="content-wrapper">
-                            JavaScript
-                        </div>
-                    </div>
-                </div>
-                <div class="slide">
-                    <div class="content">
-                        <div class="content-wrapper">
-                            Maui, .Net
-                        </div>
-                    </div>
-                </div>
-                <div class="slide">
-                    <div class="content">
-                        <div class="content-wrapper">
-                            MySQL
-               
-                        </div>
-                    </div>
-                </div>
-            </div>
+        
         </section>
     </main>
-
     <footer>
-        <p>©<span id="year"></span> 🌸Desire Vargas 🌸 </p>
-        
-        <p>Last Modification: <span id="lastModified"></span></p>
-
-                <a href="#"><img src="images/face2.png" alt="Facebook"></a>
-                <a href="#"><img src="images/insta.png" alt="Instagram"></a>
-                <a href="#"><img src="images/twit.png" alt="X"></a>
+        <footer>
+            <p>©<span id="year"></span> 🌸Desire Vargas 🌸</p>
+            <p>Last Modification: <span id="lastModified"></span></p>
+            <div class="social-links">
+                <a href="#"><img src="images/faceicon.png" alt="Facebook"></a>
+                <a href="#"><img src="images/instaicon.png" alt="Instagram"></a>
+                <a href="#"><img src="images/xicon.png" alt="X"></a>
+            </div>
     </footer>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script src="scripts/portfo.js"></script>
 </body>
 </html>

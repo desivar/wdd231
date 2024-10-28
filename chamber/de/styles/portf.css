@@ -1,207 +1,275 @@
 /* General Styles  */
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    box-sizing: border-box;
-    background-color:white;
-    color: #333;
-  }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  box-sizing: border-box;
+  background-color: #EFF7F6;
+  color: #333;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* corrected */
+  padding: 20px;
+  background-color: #B2F7EF;
+  color: black;
+  border: #333;
+
+
+}
+h1{
+  font-size: 2.5em;
+  font-weight: bold;
+}
+h2{
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+}
+.logo-img {
+  max-width: 200px; /* Adjust as needed */
+  height: auto;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+
+/* Hero Section (Unchanged) */
+
+.hero {
+  background-image: url('../images/3dhermodl.webp'); /* Path to your hero image */
+  background-size: cover; /* Cover the entire section */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  color: black; /* Text color */
+  text-align: center;
+  padding: 100px 20px;
+  position: relative; /* For positioning the overlay */
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #5465ff;
-    color: white;
-  }
-  
-  
-  .logo {
-    font-size: 1.5em;
-    font-weight: bold;
-  }
-  
-  nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-  }
-  
-  nav ul li {
-    margin-left: 20px;
-  }
-  
-  nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-  }
-  
-  nav ul li a.active, nav ul li a:hover {
-    text-decoration: underline;
-  }
-  
-  .menu-toggle {
-    display: none;
-    font-size: 1.5em;
-    cursor: pointer;
-  }
-  
-  @media (max-width: 768px) {
-    nav ul {
-      display: none;
-    }
-    .menu-toggle {
-      display: block;
-    }
-  }
-  
-  /* Hero Section (Unchanged) */
-  .hero {
-    background-color: #788bff;
-    color: white;
-    text-align: center;
-    padding: 100px 20px;
-  }
-  
-  .hero h1 {
-    font-size: 3em;
-  }
-  
-  .hero p {
-    font-size: 1.5em;
-    margin-top: 10px;
-  }
-  
-  /* About Me Section (Unchanged) */
-  .about-me {
-    background-color: #9bb1ff;
-    color: white;
-    padding: 50px 20px;
-    text-align: center;
-  }
-  
-  .about-me h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-  }
-  
-  .about-me p {
-    font-size: 1.2em;
-  }
-  
-  /* Cover Flow Carousel Styles */
-  .skills {
-    background-color: white;
-    color: #333;
-    padding: 50px 20px;
-    text-align: center;
-  }
-  
-  .skills h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-  }
-  
+  z-index: 1;
+}
+
+/* Glassmorphism effect for title */
+.glassmorphism-title {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+  backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
+  border: 2px solid rgba(255, 255, 255, 0.8); /* Light border */
+  border-radius: 15px;
+  padding: 20px 40px;
+  text-align: center;
+  color: black; /* White text for contrast */
+  max-width: 80%;
+}
+.glass-text {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+  backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
+  border: 2px solid rgba(255, 255, 255, 0.8); /* Light border */
+  border-radius: 15px;
+  padding: 20px 40px;
+  text-align: center;
+  color: black; /* White text for contrast */
+  max-width: 80%;
+}
+
+.glass-text h1, .glass-text p {
+  margin: 0;
+  padding: 0;
+}
+
+/* About Me Section (Unchanged) */
+.about-me {
+  background-color: #7BDFF2;
+  color: black;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.about-me h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.about-me p {
+  font-size: 1.2em;
+}
+
+/* Cover Flow Carousel Styles */
+
+.skills h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.scrollsnap-carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px; /* Allows the 3D effect */
+  overflow-x: hidden;
+  height: 250px;
+  position: relative;
+}
+
+.slide {
+  display: inline-block;
+  width: 15%;
+  height: 150px;
+  margin: 0 10px;
+  background-color: #F2B5D4;
+  border-radius: 10px;
+  line-height: 150px;
+  text-align: center;
+  font-size: 1.2em;
+  color: black;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  position: absolute;
+  transform-origin: center center;
+}
+
+/* Applying 3D transform for cover flow effect */
+.slide:nth-child(1) {
+  transform: translateX(-200%) rotateY(60deg) scale(0.7);
+  opacity: 0.5;
+}
+
+.slide:nth-child(2) {
+  transform: translateX(-100%) rotateY(30deg) scale(0.85);
+  opacity: 0.75;
+}
+
+.slide:nth-child(3) {
+  transform: translateX(0%) rotateY(0deg) scale(1);
+  opacity: 1;
+  z-index: 2;
+}
+
+.slide:nth-child(4) {
+  transform: translateX(100%) rotateY(-30deg) scale(0.85);
+  opacity: 0.75;
+}
+
+.slide:nth-child(5) {
+  transform: translateX(200%) rotateY(-60deg) scale(0.7);
+  opacity: 0.5;
+}
+
+
+
+@media (max-width: 768px) {
+  /* Make the container scrollable */
   .scrollsnap-carousel {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    perspective: 1000px; /* Allows the 3D effect */
-    overflow-x: hidden;
-    height: 250px;
-    position: relative;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 10px; /* Add spacing between cards if desired */
   }
-  
+
+  /* Style each slide for smaller screens */
   .slide {
-    display: inline-block;
-    width: 15%;
-    height: 150px;
-    margin: 0 10px;
-    background-color: #70d6dd;
-    border-radius: 10px;
-    line-height: 150px;
-    text-align: center;
-    font-size: 1.2em;
-    color: #333;
-    transition: transform 0.5s ease, opacity 0.5s ease;
-    position: absolute;
-    transform-origin: center center;
+    flex: 0 0 80%; /* Each card takes 80% of the viewport width */
+    scroll-snap-align: start; /* Align each card to start of the view */
   }
-  
-  /* Applying 3D transform for cover flow effect */
-  .slide:nth-child(1) {
-    transform: translateX(-200%) rotateY(60deg) scale(0.7);
-    opacity: 0.5;
-  }
-  
-  .slide:nth-child(2) {
-    transform: translateX(-100%) rotateY(30deg) scale(0.85);
-    opacity: 0.75;
-  }
-  
-  .slide:nth-child(3) {
-    transform: translateX(0%) rotateY(0deg) scale(1);
-    opacity: 1;
-    z-index: 2;
-  }
-  
-  .slide:nth-child(4) {
-    transform: translateX(100%) rotateY(-30deg) scale(0.85);
-    opacity: 0.75;
-  }
-  
-  .slide:nth-child(5) {
-    transform: translateX(200%) rotateY(-60deg) scale(0.7);
-    opacity: 0.5;
-  }
-  
 
+  /* Optional: Remove any transform or styling that might interfere */
+  .slide .content-wrapper {
+    transform: none;
+  }
 
-  @media (max-width: 768px) {
-    /* Make the container scrollable */
-    .scrollsnap-carousel {
+.content-wrapper {
+  font-size: 1em; /* Adjust font size for readability on small devices */
+}
+}
+
+/* Footer (Unchanged) */
+footer {
+  background-color: #55d8f3;
+  color: black;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+.social-links {
+  margin-top: 10px;
+}
+
+.social-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 768px) {
+  .menu {
+      display: none;
+      flex-direction: column;
+      background-color: var(--blue-dark);
+      position: absolute;
+      top: 50px;
+      right: 20px;
+      width: 150px;
+      border-radius: 8px;
+  }
+
+  .menu.active {
       display: flex;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      gap: 10px; /* Add spacing between cards if desired */
-    }
-  
-    /* Style each slide for smaller screens */
-    .slide {
-      flex: 0 0 80%; /* Each card takes 80% of the viewport width */
-      scroll-snap-align: start; /* Align each card to start of the view */
-    }
-  
-    /* Optional: Remove any transform or styling that might interfere */
-    .slide .content-wrapper {
-      transform: none;
-    }
   }
-  
-  /* Footer (Unchanged) */
-  footer {
-    background-color: #5465ff;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    position: relative;
+
+  .sandwich-menu {
+      display: flex;
   }
-  
-  .social-links {
-    margin-top: 10px;
+
+  .sandwich-menu.open .bar:nth-child(2) {
+      opacity: 0;
   }
-  
-  .social-links a {
-    color: white;
-    text-decoration: none;
-    margin: 0 5px;
+
+  .sandwich-menu.open .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
   }
-  
-  .social-links a:hover {
-    text-decoration: underline;
+
+  .sandwich-menu.open .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
   }
-  
+}
