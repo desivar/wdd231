@@ -13,8 +13,8 @@ header {
   justify-content: space-between;
   align-items: center; /* corrected */
   padding: 20px;
-  background-color: #5465ff;
-  color: white;
+  background-color: #B2F7EF;
+  color: black;
   border: #333;
 
 
@@ -46,7 +46,7 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: white;
+  color: black;
   font-weight: bold;
 }
 
@@ -79,16 +79,16 @@ main {
 /* Sidebar Styles */
 .sidebar {
   width: 30%; /* Increased width for more content */
-  background-color: #FFFAE8; /* Pastel Yellow */
+  background-color: #EFF7F6; 
   padding: 20px;
-  border: 2px solid #788bff; /* Light Pink */
+  border: 2px solid #F7D6E0; /* Light Pink */
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .sidebar h2 {
   margin-bottom: 10px;
-  color: #5465ff;
+  color: #7BDFF2;
 }
 
 .sidebar .class-list {
@@ -97,7 +97,7 @@ main {
 
 #messages {
   margin-top: 20px;
-  background-color: #FFD1DC;
+  background-color: #B2F7EF;
   padding: 10px;
   border-radius: 5px;
 }
@@ -111,7 +111,7 @@ main {
 }
 
 h1 {
-  color: white;
+  color: black;
   margin-bottom: 20px;
 }
 
@@ -146,7 +146,7 @@ h1 {
 }
 
 .class-item input[type="checkbox"] {
-  accent-color: #788bff;
+  accent-color: #B2F7EF;
   width: 20px;
   height: 20px;
 }
@@ -163,7 +163,7 @@ h1 {
 }
 
 .progress-bar-fill {
-  background-color: #788bff;
+  background-color: #F7D6E0;
   height: 100%;
   border-radius: 20px;
   transition: width 0.3s ease;
@@ -185,7 +185,7 @@ h1 {
   position: absolute;
   width: 10px;
   height: 10px;
-  background-color: #788bff;
+  background-color: #F2B5D4;
   animation: fall 3s linear infinite, rotate 3s linear infinite;
   border-radius: 50%;
 }
@@ -202,8 +202,8 @@ h1 {
 
 /* Footer Styles */
 footer {
-  background-color: #5465ff;
-  color: white;
+  background-color: #7BDFF2;
+  color: black;
   text-align: center;
   padding: 10px 0;
 }
@@ -231,7 +231,7 @@ footer a:hover {
       display: none;
       flex-direction: column;
       gap: 10px;
-      background-color: #788bff;
+      background-color: #7BDFF2;
       position: absolute;
       right: 0;
       top: 60px;
