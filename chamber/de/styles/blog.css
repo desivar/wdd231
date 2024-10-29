@@ -137,6 +137,7 @@ nav ul li a:hover {
 }
 
 /* Blog Section */
+/* Blog Section */
 #blog-content {
   max-width: 1200px;
   margin: 0 auto;
@@ -164,6 +165,7 @@ nav ul li a:hover {
   width: 100%;
   max-width: 500px;
   transition: transform 0.3s ease;
+  text-align: left; /* Align text to the left for better readability */
 }
 
 .blog-card:hover {
@@ -183,7 +185,27 @@ nav ul li a:hover {
 .blog-text h3 {
   font-size: 1.5em;
   margin-bottom: 10px;
-  color: #7BDFF2;
+  color: black;
+}
+
+.blog-text p {
+  font-size: 1em;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #333; /* Darker color for readability */
+}
+
+/* Style list items */
+.blog-text ul {
+  list-style-type: disc;
+  padding-left: 20px; /* Adds indentation for list */
+  margin-top: 10px;
+}
+
+.blog-text li {
+  font-size: 1em;
+  line-height: 1.6;
+  margin-bottom: 5px;
 }
 
 /* Newsletter Section */
