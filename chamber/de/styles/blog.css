@@ -4,7 +4,7 @@ body {
   padding: 0;
   font-family: 'Arial', sans-serif;
   box-sizing: border-box;
-  background-color: white;
+  background-color: black;
   color: #333;
 }
 
@@ -13,8 +13,8 @@ header {
   justify-content: space-between;
   align-items: center; /* corrected */
   padding: 20px;
-  background-color: #5465ff;
-  color: white;
+  background-color: #B2F7EF;
+  color: black;
   border: #333;
 
 
@@ -46,7 +46,7 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: white;
+  color: black;
   font-weight: bold;
 }
 
@@ -76,19 +76,38 @@ nav ul li a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60vh;
-  background: url('../images/elearning3d.webp') no-repeat center center/cover;
-  color: #fff;
+  height: 70vh;
+  background: url('../images/heroimgcute.webp') no-repeat center center/cover;
+  color: black;
   text-align: center;
   position: relative;
 }
 
-.hero .inner-text {
+.hero .glass-text {
   text-align: center;
   max-width: 800px;
   padding: 20px;
 }
+.glass-text {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2); 
+  backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
+  border: 2px solid rgba(255, 255, 255, 0.8); /* Light border */
+  border-radius: 15px;
+  padding: 20px 40px;
+  text-align: center;
+  color: black; /* White text for contrast */
+  max-width: 80%;
+}
 
+.glass-text h1, .glass-text p {
+  margin: 0;
+  padding: 0;
+}
+.glass-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  text-decoration: none; /* Ensure no underline on hover */
+}
 .hero h1 {
   font-size: 2.5em;
 }
@@ -97,8 +116,8 @@ nav ul li a:hover {
   display: inline-block;
   margin-top: 10px;
   padding: 10px 20px;
-  background-color: #fff;
-  color: #5465ff;
+  background-color: white;
+  color: black;
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s;
@@ -111,8 +130,8 @@ nav ul li a:hover {
 /* Marquee Section */
 .marquee {
   padding: 10px;
-  background-color: #1253a2;
-  color: white;
+  background-color: #fcd5ce;
+  color: black;
   font-size: x-large;
   font-weight: bold;
 }
@@ -164,7 +183,7 @@ nav ul li a:hover {
 .blog-text h3 {
   font-size: 1.5em;
   margin-bottom: 10px;
-  color: #5465ff;
+  color: #7BDFF2;
 }
 
 /* Newsletter Section */
@@ -197,8 +216,8 @@ nav ul li a:hover {
   padding: 10px 20px;
   font-size: 1em;
   border: none;
-  background-color: #5465ff;
-  color: #fff;
+  background-color: #7BDFF2;
+  color: black;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -209,14 +228,23 @@ nav ul li a:hover {
 
 /* Footer */
 footer {
-  background-color: #5465ff;
-  color: #fff;
-  padding: 20px;
+  background-color: #B2F7EF;
+  color: black;
   text-align: center;
+  padding: 20px;
+  position: relative;
 }
 
-footer .social-icons img {
-  width: 24px;
-  margin: 0 10px;
-  filter: invert(1);
+.social-links {
+  margin-top: 10px;
+}
+
+.social-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
 }

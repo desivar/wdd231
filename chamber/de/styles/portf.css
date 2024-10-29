@@ -11,7 +11,7 @@ body {
 header {
   display: flex;
   justify-content: space-between;
-  align-items: center; /* corrected */
+  align-items: left;
   padding: 20px;
   background-color: #B2F7EF;
   color: black;
@@ -22,6 +22,7 @@ header {
 h1{
   font-size: 2.5em;
   font-weight: bold;
+  
 }
 h2{
   font-size: 1.5em;
@@ -86,21 +87,11 @@ nav ul li a:hover {
   z-index: 1;
 }
 
-/* Glassmorphism effect for title */
-.glassmorphism-title {
-  display: inline-block;
-  background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
-  backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
-  border: 2px solid rgba(255, 255, 255, 0.8); /* Light border */
-  border-radius: 15px;
-  padding: 20px 40px;
-  text-align: center;
-  color: black; /* White text for contrast */
-  max-width: 80%;
-}
+/* Glassmorphism effect  */
+
 .glass-text {
   display: inline-block;
-  background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+  background: rgba(255, 255, 255, 0.2); 
   backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
   border: 2px solid rgba(255, 255, 255, 0.8); /* Light border */
   border-radius: 15px;
@@ -114,22 +105,72 @@ nav ul li a:hover {
   margin: 0;
   padding: 0;
 }
+.glass-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  text-decoration: none; /* Ensure no underline on hover */
+}
 
 /* About Me Section (Unchanged) */
+
 .about-me {
-  background-color: #7BDFF2;
+  padding: 50px 20px;
+  background-color: #B2F7EF;
   color: black;
-  padding: 100px 20px;
+
+}
+.about-me-title {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.about-me-text {
+  text-align: center;
+  margin-top: 10px;
+}
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Space between image and text */
+}
+
+.about-img {
+  max-width: 250px; /* Adjust as needed */
+  border-radius: 25%; /
+}
+
+.about-text {
+  flex: 1;
+  text-align: left; /* Ensure text is aligned to the left */
+}
+
+.about-text h2 {
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+
+.button-container {
+  margin-top: 20px;
   text-align: center;
 }
 
-.about-me h2 {
-  font-size: 2em;
-  margin-bottom: 20px;
+.glass-button {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+  backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
+  border: 2px solid rgba(255, 255, 255, 0.8); /* Light border */
+  border-radius: 15px;
+  padding: 20px 40px;
+  text-align: center;
+  color: black; 
+  max-width: 80%;
+
 }
 
-.about-me p {
-  font-size: 1.2em;
+.glass-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  text-decoration: none; /* Ensure no underline on hover */
+  
 }
 
 /* Cover Flow Carousel Styles */
@@ -154,7 +195,7 @@ nav ul li a:hover {
   width: 15%;
   height: 150px;
   margin: 0 10px;
-  background-color: #F2B5D4;
+  background-color: #fcd5ce;
   border-radius: 10px;
   line-height: 150px;
   text-align: center;
@@ -168,12 +209,12 @@ nav ul li a:hover {
 /* Applying 3D transform for cover flow effect */
 .slide:nth-child(1) {
   transform: translateX(-200%) rotateY(60deg) scale(0.7);
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 .slide:nth-child(2) {
   transform: translateX(-100%) rotateY(30deg) scale(0.85);
-  opacity: 0.75;
+  opacity: 0.8;
 }
 
 .slide:nth-child(3) {
@@ -184,12 +225,12 @@ nav ul li a:hover {
 
 .slide:nth-child(4) {
   transform: translateX(100%) rotateY(-30deg) scale(0.85);
-  opacity: 0.75;
+  opacity: 0.8;
 }
 
 .slide:nth-child(5) {
   transform: translateX(200%) rotateY(-60deg) scale(0.7);
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 
@@ -221,7 +262,7 @@ nav ul li a:hover {
 
 /* Footer (Unchanged) */
 footer {
-  background-color: #55d8f3;
+  background-color: #b2f7ef;
   color: black;
   text-align: center;
   padding: 20px;
@@ -240,36 +281,4 @@ footer {
 
 .social-links a:hover {
   text-decoration: underline;
-}
-@media (max-width: 768px) {
-  .menu {
-      display: none;
-      flex-direction: column;
-      background-color: var(--blue-dark);
-      position: absolute;
-      top: 50px;
-      right: 20px;
-      width: 150px;
-      border-radius: 8px;
-  }
-
-  .menu.active {
-      display: flex;
-  }
-
-  .sandwich-menu {
-      display: flex;
-  }
-
-  .sandwich-menu.open .bar:nth-child(2) {
-      opacity: 0;
-  }
-
-  .sandwich-menu.open .bar:nth-child(1) {
-      transform: translateY(8px) rotate(45deg);
-  }
-
-  .sandwich-menu.open .bar:nth-child(3) {
-      transform: translateY(-8px) rotate(-45deg);
-  }
 }

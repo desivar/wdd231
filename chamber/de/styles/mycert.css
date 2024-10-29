@@ -79,16 +79,16 @@ main {
 /* Sidebar Styles */
 .sidebar {
   width: 30%; /* Increased width for more content */
-  background-color: #EFF7F6; 
+  background-color: #f5cac3; 
   padding: 20px;
-  border: 2px solid #F7D6E0; /* Light Pink */
+  border: 4px solid whitesmoke; 
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .sidebar h2 {
   margin-bottom: 10px;
-  color: #7BDFF2;
+  color: black;
 }
 
 .sidebar .class-list {
@@ -97,7 +97,7 @@ main {
 
 #messages {
   margin-top: 20px;
-  background-color: #B2F7EF;
+  background-color: #EFF7F6;
   padding: 10px;
   border-radius: 5px;
 }
@@ -127,7 +127,7 @@ h1 {
 }
 
 .certificate {
-  background-color: #FFD1DC; /* Light Pink */
+  background-color: #fcd5ce; 
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -146,7 +146,7 @@ h1 {
 }
 
 .class-item input[type="checkbox"] {
-  accent-color: #B2F7EF;
+  accent-color: #eff7f6;
   width: 20px;
   height: 20px;
 }
@@ -154,7 +154,7 @@ h1 {
 
 /* Progress Bar */
 .progress-bar {
-  background-color: #FFF0F5; /* Lighter pink */
+  background-color: #EFF7F6; 
   border-radius: 20px;
   margin-top: 15px;
   height: 20px;
@@ -185,7 +185,7 @@ h1 {
   position: absolute;
   width: 10px;
   height: 10px;
-  background-color: #F2B5D4;
+  background-color: #7BDFF2;
   animation: fall 3s linear infinite, rotate 3s linear infinite;
   border-radius: 50%;
 }
@@ -202,7 +202,7 @@ h1 {
 
 /* Footer Styles */
 footer {
-  background-color: #7BDFF2;
+  background-color: #B2F7EF;
   color: black;
   text-align: center;
   padding: 10px 0;
@@ -231,7 +231,7 @@ footer a:hover {
       display: none;
       flex-direction: column;
       gap: 10px;
-      background-color: #7BDFF2;
+      background-color: #EFF7F6;
       position: absolute;
       right: 0;
       top: 60px;
